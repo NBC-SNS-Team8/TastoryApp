@@ -8,7 +8,7 @@
 
     </style>
 
-    <style name="EditTextIdPw">
+    <style name="EditTextStyle">
         <item name="android:textSize">25sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:ems">10</item>

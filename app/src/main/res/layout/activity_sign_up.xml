@@ -6,4 +6,215 @@
     android:layout_height="match_parent"
     tools:context=".SignUpActivity">
 
+
+    <LinearLayout
+        android:id="@+id/ll_signup_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:id="@+id/ll_signup_logo"
+           style="@style/LinearLayoutVertical"
+            android:layout_weight="1"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_signup_return"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_return_back"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="5dp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_signup_return"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/return_arrow"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <ImageView
+                    android:id="@+id/iv_signup_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="0dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tastory_logo_simple"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_signup_input"
+            style="@style/LinearLayoutVertical"
+            android:layout_weight="6.5"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_signup_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tv_back"
+                android:layout_marginHorizontal="50dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_signup_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/EditTextStyle"
+                    android:hint="@string/id"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_signup_id_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="50dp"
+                android:text="asdf"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_signup_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tv_back"
+                android:layout_marginTop="25dp"
+                android:layout_marginHorizontal="50dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_signup_pw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/EditTextStyle"
+                    android:hint="@string/pw"
+                    android:inputType="textPassword"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_signup_pw_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="50dp"
+                android:text="asdf"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_signup_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tv_back"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="25dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_signup_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/EditTextStyle"
+                    android:hint="@string/name"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_signup_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tv_back"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="25dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_signup_birth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/EditTextStyle"
+                    android:hint="@string/birth"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_signup_btn"
+            style="@style/LinearLayoutVertical"
+            android:layout_weight="2.5"
+            android:gravity="center_horizontal"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_signup_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_btn_back"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_signup_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/BtnText"
+                    android:text="@string/signup_btn"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
