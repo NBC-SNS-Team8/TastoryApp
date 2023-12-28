@@ -32,7 +32,7 @@ class FeedActivity : AppCompatActivity() {
 
         iv_btn_mypage.setOnClickListener{    // 버튼 누르면 마이페이지 화면으로 이동
             val intent = Intent(this, MyPageActivity::class.java)
-            startActivity(intent)
+            startActivity(intent)    // finish()로 해야하나요?
         }
 
         iv_steak.setOnClickListener{
@@ -40,6 +40,7 @@ class FeedActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // 디테일 액티비티2로 바꾸기
         iv_makchang.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.java)
             startActivity(intent)
@@ -51,8 +52,9 @@ class FeedActivity : AppCompatActivity() {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
 
         // 제목 설정
-        builder.setTitle("공지")
-        builder.setMessage("이벤트 쿠폰 당첨!! 이번 달 신상 맛집 할인 쿠폰을 드립니다. 쿠폰함을 확인해 주세요.")
+        builder.setTitle("\uD83C\uDF8A당첨\uD83C\uDF89")
+        builder.setMessage("이벤트 쿠폰 당첨!!\n" +
+                "이번 달 신상 맛집 할인 쿠폰을 드립니다. 쿠폰함을 확인해 주세요.")
 
         // 다이얼로그 화면 설정
         val inflater: LayoutInflater = layoutInflater
