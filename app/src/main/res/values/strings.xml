@@ -7,4 +7,12 @@
     <string name="login_btn">로그인</string>
     <string name="signup_btn">회원가입</string>
     <string name="toast_empty">필수입력란이 비어있습니다</string>
+    <string name="blog_owner"> 님의 블로그</string>
+    <string name="nick_name">닉네임</string>
+    <string name="script">스테이크 맛집 발견!!!!! \n 스테이크는 마시쒀\n
+             옆에는 까르보나라 파스타입니다.... \n  맛있다...... </string>
+    <string name="script_my">안녕하세요. 댕댕리뷰입니다.\n  오늘은 제가 한두달에 한번은 꼭 가서 막창 포장해오는\n
+        맛집 태영생막창 소개시켜드리려고 하는데요!\n가게 안은 단골분들이 자주 오는듯 보였고\n 연령대가 높은듯 하여
+        저는 항상 포장으로 먹습니다.\n사장님이 친절하셔서 항상 직접 들려서 포장 해오고 있어요.\n특히 맛이 제일
+        괜찮아서 계속 들리고 있습니다 ㅎㅎ</string>
 </resources>

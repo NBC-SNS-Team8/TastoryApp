@@ -40,7 +40,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="128dp"
                 android:gravity="center"
-                android:text=" 님의 블로그"
+                android:text="@string/blog_owner"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -71,7 +71,7 @@
                 android:layout_width="69dp"
                 android:layout_height="39dp"
                 android:layout_marginTop="40dp"
-                android:text="닉네임"
+                android:text="@string/nick_name"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -123,8 +123,7 @@
             android:layout_height="156dp"
             android:layout_marginBottom="36dp"
             android:gravity="center"
-            android:text="스테이크 맛집 발견!!!!! \n 스테이크는 마시쒀\n
-             옆에는 까르보나라 파스입니다.... \n  맛있다...... " />
+            android:text="@string/script" />
 
 
     </LinearLayout>
