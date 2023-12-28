@@ -1,5 +1,6 @@
 package com.nhkim.tastory
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -17,7 +18,7 @@ class SignUpActivity : AppCompatActivity() {
         val btnSignup = findViewById<ConstraintLayout>(R.id.cl_signup_btn)
 
         btnReturn.setOnClickListener {
-
+            finish()
         }
 
         btnSignup.setOnClickListener {
