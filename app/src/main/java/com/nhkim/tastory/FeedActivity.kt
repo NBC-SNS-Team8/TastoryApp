@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageButton
@@ -27,12 +28,17 @@ class FeedActivity : AppCompatActivity() {
 
         showDialog()
 
+        val receivedUser = intent.getParcelableExtra<User>("USER")
+        tv_welcome.text = receivedUser?.name + "님 환영합니다!"
+
 //    if (intent.hasExtra("id")) {
 //        tv_welcome = intent.getStringExtra("id") + "님, 환영합니다!"  // 영정님, id intent 키가 뭔가요??
 //    }
 
-        iv_btn_mypage.setOnClickListener{
-            val intent = Intent(this, MyPageActivity::class.java)
+        iv_btn_mypage.setOnClickListener{    // 버튼 누르면 마이페이지 화면으로 이동
+            val intent = Intent(this, MyPageActivity::class.java).apply {
+                putExtra("USER", receivedUser)
+            }
             startActivity(intent)
         }
 
