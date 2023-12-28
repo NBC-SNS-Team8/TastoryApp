@@ -66,7 +66,6 @@ class LoginActivity : AppCompatActivity() {
         btnSignupPage.setOnClickListener { 
             var intent = Intent(this, SignUpActivity::class.java)
             activityResultLauncher.launch(intent)
-//            startActivity(intent)
 
         }
         
@@ -75,7 +74,9 @@ class LoginActivity : AppCompatActivity() {
 
     private fun initView() {
         editTextLoginId.addTextChangedListener {
-
+            if (editTextLoginId.text.toString().isNotBlank()) {
+                Toast.makeText(this, "getstring", Toast.LENGTH_SHORT).show()
+            }
         }
 
         editTextLoginId.setOnFocusChangeListener { v, hasFocus ->

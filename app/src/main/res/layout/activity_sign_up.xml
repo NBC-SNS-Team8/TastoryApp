@@ -94,14 +94,15 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="50dp"
-                android:text="ID중복 체크" />
+                android:text="ID중복 체크"
+                android:textColor="@color/red"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_signup_pw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="50dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/tv_back">
 
                 <EditText
@@ -124,14 +125,15 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="50dp"
-                android:text="비밀번호 유효성 체크" />
+                android:text="비밀번호 유효성 체크"
+                android:textColor="@color/red"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_signup_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="50dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/tv_back">
 
                 <EditText
@@ -164,6 +166,60 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/tv_signup_birth_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/EditTextStyle"
+                    android:visibility="visible"
+                    android:text="@string/birth"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <EditText
+                    android:id="@+id/et_signup_birth_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/EditTextBirth"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_signup_birth_slash1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textSize="25sp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/et_signup_birth_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/EditTextBirth"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_signup_birth_slash2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textSize="25sp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/et_signup_birth_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/EditTextBirth"
+
+                    />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
@@ -180,6 +236,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_btn_back"
+                android:layout_marginTop="10dp"
 
                 >
 
