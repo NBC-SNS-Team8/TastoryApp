@@ -15,7 +15,9 @@ class SignUpActivity : AppCompatActivity() {
         val editTextSignupId = findViewById<EditText>(R.id.et_signup_id)
         val editTextSignupPw = findViewById<EditText>(R.id.et_signup_pw)
         val editTextSignupName = findViewById<EditText>(R.id.et_signup_name)
-        val editTextSignupBirth = findViewById<EditText>(R.id.et_signup_birth)
+        val editTextSignupBirthYear = findViewById<EditText>(R.id.et_signup_birth_year)
+        val editTextSignupBirthMonth = findViewById<EditText>(R.id.et_signup_birth_month)
+        val editTextSignupBirthDay = findViewById<EditText>(R.id.et_signup_birth_day)
         val btnSignup = findViewById<ConstraintLayout>(R.id.cl_signup_btn)
 
         btnReturn.setOnClickListener {
@@ -26,7 +28,7 @@ class SignUpActivity : AppCompatActivity() {
             val userId = editTextSignupId.text.toString()
             val userPw = editTextSignupPw.text.toString()
             val userName = editTextSignupName.text.toString()
-            val userBirth = editTextSignupBirth.text.toString()
+            val userBirth = editTextSignupBirthYear.text.toString() + editTextSignupBirthMonth.text.toString() + editTextSignupBirthDay.text.toString()
 
             val intent = Intent(this, LoginActivity::class.java).apply {
                 putExtra("Id", userId)
