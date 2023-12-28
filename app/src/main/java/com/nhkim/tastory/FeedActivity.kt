@@ -25,6 +25,7 @@ class FeedActivity : AppCompatActivity() {
         val iv_btn_mypage = findViewById<ImageButton>(R.id.iv_btn_mypage)
         val cl_feed = findViewById<ConstraintLayout>(R.id.cl_feed)
         val cl_feed2 = findViewById<ConstraintLayout>(R.id.cl_feed2)
+        val tv_welcome = findViewById<TextView>(R.id.tv_welcome)
 
         showDialog()
 
