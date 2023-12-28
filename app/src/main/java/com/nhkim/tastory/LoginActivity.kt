@@ -3,6 +3,7 @@ package com.nhkim.tastory
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
@@ -27,6 +28,9 @@ class LoginActivity : AppCompatActivity() {
         findViewById(R.id.cl_login_signup_btn)
     }
 
+    private var userId: String = ""
+    private var userName: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -37,10 +41,13 @@ class LoginActivity : AppCompatActivity() {
         //activityResultLauncher
         activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
-                val userId = it.data?.getStringExtra("Id")?: ""
+                userId = it.data?.getStringExtra("Id")?: ""
                 val userPw = it.data?.getStringExtra("Pw")?: ""
-                val userName = it.data?.getStringExtra("Name")?: ""
+                userName = it.data?.getStringExtra("Name")?: ""
                 val userBirth = it.data?.getStringExtra("Birth")?: ""
+
+                editTextLoginId.setText(userId)
+                editTextLoginPw.setText(userName)
             }
         }
         
@@ -48,6 +55,12 @@ class LoginActivity : AppCompatActivity() {
             if (editTextLoginId.text.trim().isEmpty() || editTextLoginPw.text.trim().isEmpty()) {
                 Toast.makeText(this, getString(R.string.toast_empty), Toast.LENGTH_SHORT).show()
             }
+
+            val user = User(userId, userName)
+            val intent = Intent(this, FeedActivity::class.java).apply {
+                putExtra("USER", user)
+            }
+            startActivity(intent)
         }
         
         btnSignupPage.setOnClickListener { 
