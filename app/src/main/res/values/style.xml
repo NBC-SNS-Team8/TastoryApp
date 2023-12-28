@@ -22,6 +22,7 @@
     <style name="EditTextBirth">
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:maxLength">2</item>
         <item name="android:ems">3</item>
         <item name="android:textColorHint">@color/brown</item>
         <item name="android:gravity">end</item>
