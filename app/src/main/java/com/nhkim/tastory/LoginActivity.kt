@@ -6,10 +6,11 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.widget.addTextChangedListener
 
-//lateinit var activityResultLauncher: ActivityResultLauncher<Intent>
+lateinit var activityResultLauncher: ActivityResultLauncher<Intent>
 
 class LoginActivity : AppCompatActivity() {
 
@@ -34,6 +35,14 @@ class LoginActivity : AppCompatActivity() {
         initView()
 
         //activityResultLauncher
+        activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == RESULT_OK) {
+                val userId = it.data?.getStringExtra("Id")?: ""
+                val userPw = it.data?.getStringExtra("Pw")?: ""
+                val userName = it.data?.getStringExtra("Name")?: ""
+                val userBirth = it.data?.getStringExtra("Birth")?: ""
+            }
+        }
         
         btnLogin.setOnClickListener {
             if (editTextLoginId.text.trim().isEmpty() || editTextLoginPw.text.trim().isEmpty()) {
@@ -43,7 +52,9 @@ class LoginActivity : AppCompatActivity() {
         
         btnSignupPage.setOnClickListener { 
             var intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
+            activityResultLauncher.launch(intent)
+//            startActivity(intent)
+
         }
         
         
