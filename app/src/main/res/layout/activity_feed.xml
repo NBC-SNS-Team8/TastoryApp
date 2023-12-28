@@ -6,4 +6,215 @@
     android:layout_height="match_parent"
     tools:context=".FeedActivity">
 
+    <ImageView
+        android:id="@+id/iv_btn_back"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/iv_btn_mypage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_mypage"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_welcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_welcome"
+        app:layout_constraintTop_toTopOf="@+id/tv_welcome" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:gravity="right"
+        android:text=""
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_btn_back"
+        app:layout_constraintEnd_toStartOf="@+id/iv_btn_mypage"
+        app:layout_constraintStart_toEndOf="@+id/iv_btn_back"
+        app:layout_constraintTop_toTopOf="@+id/iv_btn_back" />
+
+    <TextView
+        android:id="@+id/tv_history"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="히스토리"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_btn_back" />
+
+    <ImageView
+        android:id="@+id/iv_pizza"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pizza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_history" />
+
+    <ImageView
+        android:id="@+id/iv_cake"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cake"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_pizza"
+        app:layout_constraintStart_toEndOf="@+id/iv_pizza"
+        app:layout_constraintTop_toTopOf="@+id/iv_pizza" />
+
+    <ImageView
+        android:id="@+id/iv_ramen"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ramen"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_cake"
+        app:layout_constraintStart_toEndOf="@+id/iv_cake"
+        app:layout_constraintTop_toTopOf="@+id/iv_cake" />
+
+    <ImageView
+        android:id="@+id/iv_cookie"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cookie"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_ramen"
+        app:layout_constraintStart_toEndOf="@+id/iv_ramen"
+        app:layout_constraintTop_toTopOf="@+id/iv_ramen" />
+
+    <ImageView
+        android:id="@+id/iv_account"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pizza" />
+
+    <TextView
+        android:id="@+id/tv_chopa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="쵸파"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_account"
+        app:layout_constraintTop_toTopOf="@+id/iv_account" />
+
+    <TextView
+        android:id="@+id/tv_time1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="3시간 전"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_account"
+        app:layout_constraintStart_toEndOf="@+id/iv_account"
+        app:layout_constraintTop_toBottomOf="@+id/tv_chopa" />
+
+    <ImageView
+        android:id="@+id/iv_steak"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/steak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_account" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="크리스마스 추천 맛집!"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_steak" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="크리스마스를 맞아 웨이팅 없이는 갈 수 없는 맛집에 다녀온 후기를 들려드리려고 합니다~!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/iv_account2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tv_duckman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="덕만"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_account2"
+        app:layout_constraintTop_toTopOf="@+id/iv_account2" />
+
+    <TextView
+        android:id="@+id/tv_time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="5시간 전"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_account2"
+        app:layout_constraintStart_toEndOf="@+id/iv_account2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_duckman" />
+
+    <ImageView
+        android:id="@+id/iv_makchang"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/makchang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_account2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
