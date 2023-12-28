@@ -10,4 +10,5 @@
     <string name="login_btn">로그인</string>
     <string name="signup_btn">회원가입</string>
     <string name="toast_empty">필수입력항목을 입력해주세요</string>
+    <string name="toast_login">로그인 성공</string>
 </resources>

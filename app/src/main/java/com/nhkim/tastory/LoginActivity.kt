@@ -38,16 +38,14 @@ class LoginActivity : AppCompatActivity() {
 
         initView()
 
-        //activityResultLauncher
         activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
                 userId = it.data?.getStringExtra("Id")?: ""
                 val userPw = it.data?.getStringExtra("Pw")?: ""
                 userName = it.data?.getStringExtra("Name")?: ""
-                val userBirth = it.data?.getStringExtra("Birth")?: ""
 
                 editTextLoginId.setText(userId)
-                editTextLoginPw.setText(userName)
+                editTextLoginPw.setText(userPw)
             }
         }
         
@@ -75,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
     private fun initView() {
         editTextLoginId.addTextChangedListener {
             if (editTextLoginId.text.toString().isNotBlank()) {
-                Toast.makeText(this, "getstring", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.toast_login), Toast.LENGTH_SHORT).show()
             }
         }
 
