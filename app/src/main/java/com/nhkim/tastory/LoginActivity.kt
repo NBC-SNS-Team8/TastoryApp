@@ -41,6 +41,9 @@ class LoginActivity : AppCompatActivity() {
                 val userPw = it.data?.getStringExtra("Pw")?: ""
                 val userName = it.data?.getStringExtra("Name")?: ""
                 val userBirth = it.data?.getStringExtra("Birth")?: ""
+
+                editTextLoginId.setText(userId)
+                editTextLoginPw.setText(userPw)
             }
         }
         
@@ -62,7 +65,9 @@ class LoginActivity : AppCompatActivity() {
 
     private fun initView() {
         editTextLoginId.addTextChangedListener {
-
+            if (editTextLoginId.text.toString().isNotBlank()) {
+                Toast.makeText(this, "getstring", Toast.LENGTH_SHORT).show()
+            }
         }
 
         editTextLoginId.setOnFocusChangeListener { v, hasFocus ->
