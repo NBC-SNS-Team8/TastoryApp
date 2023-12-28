@@ -13,18 +13,18 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet.Constraint
+import androidx.constraintlayout.widget.ConstraintSet.Layout
 
 class FeedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
 
-        val tv_welcome = findViewById<TextView>(R.id.tv_welcome)
         val iv_btn_mypage = findViewById<ImageButton>(R.id.iv_btn_mypage)
-        val iv_steak = findViewById<ImageView>(R.id.iv_steak)
-        val iv_steak2 = findViewById<ImageView>(R.id.iv_steak2)
-        val iv_makchang = findViewById<ImageView>(R.id.iv_makchang)
-        val iv_makchang2 = findViewById<ImageView>(R.id.iv_makchang2)
+        val cl_feed = findViewById<ConstraintLayout>(R.id.cl_feed)
+        val cl_feed2 = findViewById<ConstraintLayout>(R.id.cl_feed2)
 
         showDialog()
 
@@ -42,21 +42,12 @@ class FeedActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        iv_steak.setOnClickListener{
-            val intent = Intent(this, DetailActivity::class.java)
-            startActivity(intent)
-        }
-        iv_steak2.setOnClickListener{
+        cl_feed.setOnClickListener{
             val intent = Intent(this, DetailActivity::class.java)
             startActivity(intent)
         }
 
-
-        iv_makchang.setOnClickListener {
-            val intent = Intent(this, MyDetailActivity::class.java)
-            startActivity(intent)
-        }
-        iv_makchang2.setOnClickListener {
+        cl_feed2.setOnClickListener {
             val intent = Intent(this, MyDetailActivity::class.java)
             startActivity(intent)
         }
