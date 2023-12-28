@@ -21,9 +21,10 @@ class FeedActivity : AppCompatActivity() {
         val tv_welcome = findViewById<TextView>(R.id.tv_welcome)
         val iv_btn_mypage = findViewById<ImageButton>(R.id.iv_btn_mypage)
         val iv_steak = findViewById<ImageView>(R.id.iv_steak)
+        val iv_steak2 = findViewById<ImageView>(R.id.iv_steak2)
         val iv_makchang = findViewById<ImageView>(R.id.iv_makchang)
+        val iv_makchang2 = findViewById<ImageView>(R.id.iv_makchang2)
 
-        // 없어도 다이얼로그 나오나? val dialog: LinearLayout = findViewById(R.id.dialog)
         showDialog()
 
 //    if (intent.hasExtra("id")) {
@@ -32,17 +33,25 @@ class FeedActivity : AppCompatActivity() {
 
         iv_btn_mypage.setOnClickListener{    // 버튼 누르면 마이페이지 화면으로 이동
             val intent = Intent(this, MyPageActivity::class.java)
-            startActivity(intent)    // finish()로 해야하나요?
+            startActivity(intent)
         }
 
         iv_steak.setOnClickListener{
             val intent = Intent(this, DetailActivity::class.java)
             startActivity(intent)
         }
-
-        // 디테일 액티비티2로 바꾸기
-        iv_makchang.setOnClickListener {
+        iv_steak2.setOnClickListener{
             val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        iv_makchang.setOnClickListener {
+            val intent = Intent(this, MyDetailActivity::class.java)
+            startActivity(intent)
+        }
+        iv_makchang2.setOnClickListener {
+            val intent = Intent(this, MyDetailActivity::class.java)
             startActivity(intent)
         }
     }
