@@ -154,17 +154,51 @@ class SignUpActivity : AppCompatActivity() {
 
         editTextSignupName.addTextChangedListener {
             tvNameCheck.setTextColor(Color.RED)
-            var inputName = editTextSignupName.text.toString()
-            if (inputName.trim().isEmpty()) {
+            val inputName = editTextSignupName.text.toString()
+            if (inputName.isEmpty()) {
                 tvNameCheck.text = getString(R.string.error_empty)
+            } else if (regSpecial.containsMatchIn(inputName)) {
+                tvNameCheck.text = getString(R.string.check_invalid_name)
             } else {
                 tvNameCheck.text = ""
             }
         }
 
         editTextSignupBirthYear.addTextChangedListener {
-            tvBirthCheck.setTextColor(Color.RED)
-            val inputBirthYear = editTextSignupBirthYear
+            val inputBirthYear = editTextSignupBirthYear.text.toString()
+            if (inputBirthYear.isEmpty()) {
+                tvBirthCheck.text = getString(R.string.error_empty)
+            } else {
+                if (inputBirthYear.toInt() !in 1900..2023) {
+                    tvBirthCheck.text = getString(R.string.check_birth_year)
+                } else {
+                    tvBirthCheck.text = ""
+                }
+            }
+        }
+        editTextSignupBirthMonth.addTextChangedListener {
+            val inputBirthMonth = editTextSignupBirthMonth.text.toString()
+            if (inputBirthMonth.isEmpty()) {
+                tvBirthCheck.text = getString(R.string.error_empty)
+            } else {
+                if (inputBirthMonth.toInt() !in 1..12) {
+                    tvBirthCheck.text = getString(R.string.check_birth_month)
+                } else {
+                    tvBirthCheck.text = ""
+                }
+            }
+        }
+        editTextSignupBirthDay.addTextChangedListener {
+            val inputBirthDay = editTextSignupBirthDay.text.toString()
+            if (inputBirthDay.isEmpty()) {
+                tvBirthCheck.text = getString(R.string.error_empty)
+            } else {
+                if (inputBirthDay.toInt() !in 1..31) {
+                    tvBirthCheck.text = getString(R.string.check_birth_day)
+                } else {
+                    tvBirthCheck.text = ""
+                }
+            }
         }
 
 
@@ -188,15 +222,88 @@ class SignUpActivity : AppCompatActivity() {
                 if (editTextSignupPw.text.toString().isBlank()) {
                     tvPwCheck.text = getString(R.string.error_empty)
                 } else {
-                    tvPwCheck.setTextColor(Color.GREEN)
-                    tvPwCheck.text = getString(R.string.check_valid_pw)
+                    val inputPw = editTextSignupPw.text.toString()
+                    when {
+                        inputPw.matches(regHan) -> {
+                            tvPwCheck.text = getString(R.string.check_invalid_pw_char_han)
+                        }
+
+                        regEn.containsMatchIn(inputPw).not() -> {
+                            tvPwCheck.text = getString(R.string.check_invalid_pw_char)
+                        }
+
+                        regNum.containsMatchIn(inputPw).not() -> {
+                            tvPwCheck.text = getString(R.string.check_invalid_pw_char)
+                        }
+
+                        regSpecial.containsMatchIn(inputPw).not() -> {
+                            tvPwCheck.text = getString(R.string.check_invalid_pw_special)
+                        }
+
+                        inputPw.length !in 8..20 -> {
+                            tvPwCheck.text = getString(R.string.check_invalid_pw_length)
+                        }
+
+                        else -> {
+                            tvPwCheck.setTextColor(Color.GREEN)
+                            tvPwCheck.text = getString(R.string.check_valid_pw)
+                        }
+                    }
+                }
+            }
+        }
+
+        editTextSignupName.setOnFocusChangeListener { v, hasFocus ->
+            tvNameCheck.isVisible = true
+            if (hasFocus.not()) {
+                if (editTextSignupName.text.toString().isBlank()) {
+                    tvNameCheck.text = getString(R.string.error_empty)
+                } else if (regSpecial.containsMatchIn(editTextSignupName.text.toString())) {
+                    tvNameCheck.text = getString(R.string.check_invalid_name)
+                } else {
+                    tvNameCheck.text = ""
+                }
+            }
+        }
+
+        editTextSignupBirthYear.setOnFocusChangeListener { v, hasFocus ->
+            tvBirthCheck.isVisible = true
+            if (hasFocus.not()) {
+                if (editTextSignupBirthYear.text.toString().isBlank()) {
+                    tvBirthCheck.text = getString(R.string.error_empty)
+                } else if (editTextSignupBirthYear.text.toString().toInt() !in 1900..2023) {
+                    tvBirthCheck.text = getString(R.string.check_birth_year)
+                } else {
+                    tvBirthCheck.text = ""
+                }
+            }
+        }
+        editTextSignupBirthMonth.setOnFocusChangeListener { v, hasFocus ->
+            tvBirthCheck.isVisible = true
+            if (hasFocus.not()) {
+                if (editTextSignupBirthMonth.text.toString().isBlank()) {
+                    tvBirthCheck.text = getString(R.string.error_empty)
+                } else if (editTextSignupBirthMonth.text.toString().toInt() !in 1..12) {
+                    tvBirthCheck.text = getString(R.string.check_birth_month)
+                } else {
+                    tvPwCheck.text = ""
+                }
+            }
+        }
+        editTextSignupBirthDay.setOnFocusChangeListener { v, hasFocus ->
+            tvBirthCheck.isVisible = true
+            if (hasFocus.not()) {
+                if (editTextSignupBirthDay.text.toString().isBlank()) {
+                    tvBirthCheck.text = getString(R.string.error_empty)
+                } else if (editTextSignupBirthDay.text.toString().toInt() !in 1..31) {
+                    tvBirthCheck.text = getString(R.string.check_birth_day)
+                } else {
+                    tvBirthCheck.text = ""
                 }
             }
         }
 
 
-
-        //생년월일 날짜 제한, 년도 4자리, 월일 두자리
         //하나라도 invalid일 때 버튼 안 눌리게 하는 ...변수?를 만들어야 하나
         //함수 리팩토링은 또 언제 하지...
 

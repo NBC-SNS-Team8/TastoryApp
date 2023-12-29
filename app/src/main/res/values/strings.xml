@@ -21,5 +21,9 @@
     <string name="check_id">ID중복 체크</string>
     <string name="check_pw">비밀번호 유효성 체크</string>
     <string name="check_name">이름 입력 확인</string>
-    <string name="check_birth">유효한 날짜 확인</string>
+    <string name="check_invalid_name">이름에는 특수문자가 들어갈 수 없습니다</string>
+    <string name="check_birth">연도는 4자리, 월,일은 2자리로 입력하세요</string>
+    <string name="check_birth_year">생년은 1900~2023까지입니다</string>
+    <string name="check_birth_month">월은 1~12까지입니다 </string>
+    <string name="check_birth_day">날짜는 1~31까지입니다</string>
 </resources>
