@@ -5,13 +5,15 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/iv_pizza"
+        android:id="@+id/iv_history_image"
         android:layout_width="110dp"
-        android:layout_height="130dp"
+        android:layout_height="140dp"
         android:scaleType="centerCrop"
         android:src="@drawable/pizza"
+        android:clipToOutline="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_history_corners"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -28,8 +28,8 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="22dp"
@@ -46,9 +46,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:gravity="center"
-                    android:text=""
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:text="@string/blog_owner"
+                    android:textSize="20dp"/>
 
             </RelativeLayout>
 
@@ -60,30 +59,28 @@
 
                 <TextView
                     android:id="@+id/tv_blog_title"
-                    android:layout_width="wrap_content"
+                    android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="28dp"
+                    android:textSize="22sp"
                     android:text="@string/steak_script"
-                    android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.12"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_nick_name"
+                    android:id="@+id/tv_writer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="268dp"
+                    android:textSize="16dp"
                     android:text="@string/name"
-                    android:textSize="20dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.283"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_blog_title" />
-
 
                 <TextView
                     android:id="@+id/tv_date"
@@ -91,8 +88,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/date"
                     android:textSize="20dp"
-                    app:layout_constraintStart_toStartOf="@+id/tv_nick_name"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_nick_name" />
+                    app:layout_constraintStart_toStartOf="@+id/tv_writer"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_writer" />
 
                 <View
                     android:id="@+id/view"
@@ -101,7 +98,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@color/light_gray"
                     app:layout_constraintBottom_toTopOf="@+id/iv_blog_image"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_nick_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_writer"
                     app:layout_constraintVertical_bias="0.117"
                     tools:layout_editor_absoluteX="30dp" />
 
@@ -114,17 +111,17 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.493"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_nick_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_writer"
                     app:srcCompat="@drawable/steak" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circularImageView"
+                    android:id="@+id/iv_writer_profile"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="28dp"
                     android:src="@drawable/bright"
-                    app:layout_constraintEnd_toStartOf="@+id/tv_nick_name"
-                    app:layout_constraintHorizontal_bias="0.638"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_writer"
+                    app:layout_constraintHorizontal_bias="0.432"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_blog_title" />
 
@@ -138,7 +135,7 @@
                 android:padding="40dp"
                 android:gravity="center"
                 android:text="@string/steak_review"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
 
         </LinearLayout>
