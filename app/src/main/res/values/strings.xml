@@ -26,5 +26,26 @@
     <string name="check_birth_year">생년은 1900~2023까지입니다</string>
     <string name="check_birth_month">월은 1~12까지입니다 </string>
     <string name="check_birth_day">날짜는 1~31까지입니다</string>
+    <string name="blog_owner"> 님의 블로그</string>
+    <string name="nick_name">닉네임</string>
+    <string name="toast_empty">필수입력항목을 입력해주세요</string>
+    <string name="blog_ower">OOO님의 블로그</string>
+    <string name="steak_script">분위기 좋은 스테이크 맛집</string>
+    <string name="nickname">닉네임</string>
+    <string name="steak_review">연남동데이트하기 좋은 \n연남동 스테이크 맛집 블루쇼파스타\n\n분위기 있고, 맛도 좋은 연남동스테이크 맛집을 소개해드릴게요 :)\n\n골목이 복잡하지 않고\n번화가쪽에 위치하고 있는 것이 \n아니라 찾기 어렵지 않았어요!\n\n 차를 가지고 오셔도 걱정하실 것이 없는 게 근처에 연남동 공영주차장이 있어서\n거기에 주차를 하고 와서 이용하기에도 나쁘지 않을 것 같았어요.</string>
+    <string name="date">2023.12.07</string>
+    <string name="choppa">쵸파</string>
+    <string name="update_time">3시간 전</string>
+    <string name="christmas_restaurant">크리스마스 추천 맛집!</string>
+    <string name="review">벌써 2023년 연말이 다가왔습니다~! \n크리스마스와 연말을 맞아 가족 혹은 연인과 함께 방문하기 좋은 맛집을 소개해 드릴게요.</string>
+    <string name="nickname2">덕만</string>
+    <string name="update_time2">5시간 전</string>
+    <string name="mackang_script">서울 막창 맛집을 소개합니다~</string>
+    <string name="mackang_review">을지로 주변에 가신다면 꼭 한 번 가봐야하는 막창 맛집!\n언제든 부담없이 가기 좋은</string>
+    <string name="my_blog_ower">이름님의 블로그</string>
+    <string name="info">정보</string>
+    <string name="eng_id">ID</string>
+    <string name="my_blog">나의 글</string>
+    <string name="christmas_review">크리스마스를 맞아 웨이팅 없이는 갈 수 없는 맛집에 다녀온 후기를 들려드리려고 합니다~! 이번에 제가 다녀온 곳은 서울의 어느 한 레스토랑인데요!</string>
 
 </resources>
