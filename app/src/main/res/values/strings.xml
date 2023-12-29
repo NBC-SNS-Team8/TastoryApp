@@ -10,6 +10,7 @@
     <string name="login_btn">로그인</string>
     <string name="signup_btn">회원가입</string>
     <string name="error_empty">필수입력항목을 입력해주세요</string>
+    <string name="check_exist_id">중복된 ID가 존재합니다. 다른 아이디를 입력해주세요</string>
     <string name="check_invalid_pw_char">비밀번호는 숫자, 특수문자, 영문대문자를 하나 이상 포함해야 하고 한글 자모는 들어갈 수 없습니다.</string>
     <string name="check_invalid_pw_length">비밀번호는 길이 8글자 이상 20글자 이하여야 합니다</string>
     <string name="check_valid_pw">유효한 비밀번호입니다</string>
