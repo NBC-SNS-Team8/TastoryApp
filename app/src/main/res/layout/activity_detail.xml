@@ -134,7 +134,7 @@
                 android:layout_marginTop="10dp"
                 android:padding="40dp"
                 android:gravity="center"
-                android:text="@string/steak_review"
+                android:text="@string/steak_review_contents"
                 android:textSize="16sp" />
 
 
