@@ -52,13 +52,15 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             if (editTextLoginId.text.trim().isEmpty() || editTextLoginPw.text.trim().isEmpty()) {
                 Toast.makeText(this, getString(R.string.error_empty), Toast.LENGTH_SHORT).show()
+            } else {
+                val user = User(userId, userName)
+                val intent = Intent(this, FeedActivity::class.java).apply {
+                    putExtra("USER", user)
+                }
+                startActivity(intent)
+
             }
 
-            val user = User(userId, userName)
-            val intent = Intent(this, FeedActivity::class.java).apply {
-                putExtra("USER", user)
-            }
-            startActivity(intent)
         }
 
         btnSignupPage.setOnClickListener {

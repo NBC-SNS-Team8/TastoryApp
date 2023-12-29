@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 
 class SignUpActivity : AppCompatActivity() {
@@ -53,6 +54,12 @@ class SignUpActivity : AppCompatActivity() {
 //        editTextSignupBirthDay
 //    )
 //
+
+    private val regHan = Regex("[ㄱ-하ㅏ-ㅣ]+")
+    private val regEn = Regex("[A-Z]+")
+    private val regNum = Regex("[0-9]+")
+    private val regSpecial = Regex("[~!@#\$%^&*_\\-+=`|:;,.?/]+")
+
     private val alreadyExistIds =
         listOf("chopa12", "dm_29", "Id23", "nhKim", "ga_hyun", "you_jm", "cyjTired")
 
@@ -83,6 +90,10 @@ class SignUpActivity : AppCompatActivity() {
 
         val tvPwCheck = findViewById<TextView>(R.id.tv_signup_pw_check)
 
+        val tvNameCheck = findViewById<TextView>(R.id.tv_signup_name_check)
+
+        val tvBirthCheck = findViewById<TextView>(R.id.tv_signup_birth_check)
+
 
         val etList = listOf(
             editTextSignupId,
@@ -112,23 +123,19 @@ class SignUpActivity : AppCompatActivity() {
                     tvPwCheck.text = getString(R.string.error_empty)
                 }
 
-                inputPw.contains(regex = Regex("[ㄱ-ㅎ]")) -> {
+                inputPw.matches(regHan).not() -> {
+                    tvPwCheck.text = getString(R.string.check_invalid_pw_char_han)
+                }
+
+                inputPw.matches(regSpecial).not() -> {
+                    tvPwCheck.text = getString(R.string.check_invalid_pw_special)
+                }
+
+                inputPw.matches(regEn).not() -> {
                     tvPwCheck.text = getString(R.string.check_invalid_pw_char)
                 }
 
-                inputPw.contains(regex = Regex("[ㅏ-ㅣ]")) -> {
-                    tvPwCheck.text = getString(R.string.check_invalid_pw_char)
-                }
-
-                inputPw.contains(regex = Regex("[^!@#$%^&*()~]")) -> {
-                    tvPwCheck.text = getString(R.string.check_invalid_pw_char)
-                }
-
-                inputPw.contains(regex = Regex("[^A-Z]")) -> {
-                    tvPwCheck.text = getString(R.string.check_invalid_pw_char)
-                }
-
-                inputPw.contains(regex = Regex("[^0-9]")) -> {
+                inputPw.matches(regNum).not() -> {
                     tvPwCheck.text = getString(R.string.check_invalid_pw_char)
                 }
 
@@ -143,12 +150,24 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
+        editTextSignupId.setOnFocusChangeListener { v, hasFocus ->
+            tvIdCheck.isVisible = true
+            if (hasFocus.not()) {
+                if (editTextSignupId.text.toString().isBlank()) {
+                    tvIdCheck.text = getString(R.string.error_empty)
+                } else {
+                    tvIdCheck.setTextColor(Color.GREEN)
+                    tvIdCheck.text = getString(R.string.check_valid_Id)
+                }
+            }
+        }
+
         //생년월일 날짜 제한
 
 
 //        btnSignup.isEnabled = false
 
-        initView()
+//        initView()
 
         btnReturn.setOnClickListener {
             finish()
