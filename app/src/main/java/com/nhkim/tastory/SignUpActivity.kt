@@ -55,10 +55,10 @@ class SignUpActivity : AppCompatActivity() {
 //    )
 //
 
-    private val regHan = Regex("[ㄱ-하ㅏ-ㅣ]+")
-    private val regEn = Regex("[A-Z]+")
-    private val regNum = Regex("[0-9]+")
-    private val regSpecial = Regex("[~!@#\$%^&*_\\-+=`|:;,.?/]+")
+    private val regHan = Regex("[ㄱ-하ㅏ-ㅣ]")
+    private val regEn = Regex("[A-Z]")
+    private val regNum = Regex("[0-9]")
+    private val regSpecial = Regex("[~!@#\$%^&*_\\-+=`|:;,.?/]")
 
     private val alreadyExistIds =
         listOf("chopa12", "dm_29", "Id23", "nhKim", "ga_hyun", "you_jm", "cyjTired")
@@ -106,6 +106,7 @@ class SignUpActivity : AppCompatActivity() {
 
 
         editTextSignupId.addTextChangedListener {
+            tvIdCheck.setTextColor(Color.RED)
             if (editTextSignupId.text.toString().trim().isEmpty()) {
                 tvIdCheck.text = getString(R.string.error_empty)
 
@@ -117,26 +118,27 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         editTextSignupPw.addTextChangedListener {
+            tvPwCheck.setTextColor(Color.RED)
             val inputPw = editTextSignupPw.text.toString()
             when {
                 inputPw.isBlank() -> {
                     tvPwCheck.text = getString(R.string.error_empty)
                 }
 
-                inputPw.matches(regHan).not() -> {
+                inputPw.matches(regHan) -> {
                     tvPwCheck.text = getString(R.string.check_invalid_pw_char_han)
                 }
 
-                inputPw.matches(regSpecial).not() -> {
+                regEn.containsMatchIn(inputPw).not() -> {
+                    tvPwCheck.text = getString(R.string.check_invalid_pw_char)
+                }
+
+                regNum.containsMatchIn(inputPw).not() -> {
+                    tvPwCheck.text = getString(R.string.check_invalid_pw_char)
+                }
+
+                regSpecial.containsMatchIn(inputPw).not() -> {
                     tvPwCheck.text = getString(R.string.check_invalid_pw_special)
-                }
-
-                inputPw.matches(regEn).not() -> {
-                    tvPwCheck.text = getString(R.string.check_invalid_pw_char)
-                }
-
-                inputPw.matches(regNum).not() -> {
-                    tvPwCheck.text = getString(R.string.check_invalid_pw_char)
                 }
 
                 inputPw.length !in 8..20 -> {
@@ -144,8 +146,7 @@ class SignUpActivity : AppCompatActivity() {
                 }
 
                 else -> {
-                    tvPwCheck.setTextColor(Color.GREEN)
-                    tvPwCheck.text = getString(R.string.check_valid_pw)
+                    tvPwCheck.text = ""
                 }
             }
         }
@@ -162,7 +163,20 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
-        //생년월일 날짜 제한
+        editTextSignupPw.setOnFocusChangeListener { v, hasFocus ->
+            tvPwCheck.isVisible = true
+            if (hasFocus.not()) {
+                if (editTextSignupPw.text.toString().isBlank()) {
+                    tvPwCheck.text = getString(R.string.error_empty)
+                } else {
+                    tvPwCheck.setTextColor(Color.GREEN)
+                    tvPwCheck.text = getString(R.string.check_valid_pw)
+                }
+            }
+        }
+
+        //생년월일 날짜 제한, 년도 4자리, 월일 두자리
+        //invalid일 때 버튼 안 눌리게 하는
 
 
 //        btnSignup.isEnabled = false
@@ -282,9 +296,8 @@ class SignUpActivity : AppCompatActivity() {
 
 //겹치는 거 함수를 만들어야 하는데... 으아아악
 
-    private fun signupBtnEnabled() {
-
+//    private fun signupBtnEnabled() {
 //            btnSignup.isEnabled =
-    }
+//    }
 
 }
