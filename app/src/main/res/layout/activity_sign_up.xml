@@ -103,14 +103,10 @@
 
                     <TextView
                         android:id="@+id/tv_signup_id_check"
+                        style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginEnd="50dp"
-                        android:text="@string/check_id"
-                        android:textColor="@color/red"
-                        android:visibility="invisible" />
+                        android:text="@string/check_id" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_pw"
@@ -136,14 +132,10 @@
 
                     <TextView
                         android:id="@+id/tv_signup_pw_check"
+                        style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginEnd="50dp"
-                        android:text="@string/check_pw"
-                        android:textColor="@color/red"
-                        android:visibility="invisible" />
+                        android:text="@string/check_pw" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_name"
@@ -168,14 +160,10 @@
 
                     <TextView
                         android:id="@+id/tv_signup_name_check"
+                        style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginEnd="50dp"
-                        android:text="@string/check_name"
-                        android:textColor="@color/red"
-                        android:visibility="invisible" />
+                        android:text="@string/check_name" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_birth"
@@ -259,15 +247,11 @@
 
                     <TextView
                         android:id="@+id/tv_signup_birth_check"
+                        style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginEnd="50dp"
                         android:layout_marginBottom="5dp"
-                        android:text="@string/check_birth"
-                        android:textColor="@color/red"
-                        android:visibility="invisible" />
+                        android:text="@string/check_birth" />
 
                 </LinearLayout>
             </ScrollView>
