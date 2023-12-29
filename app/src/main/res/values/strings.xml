@@ -26,4 +26,5 @@
     <string name="check_birth_year">생년은 1900~2023까지입니다</string>
     <string name="check_birth_month">월은 1~12까지입니다 </string>
     <string name="check_birth_day">날짜는 1~31까지입니다</string>
+
 </resources>
