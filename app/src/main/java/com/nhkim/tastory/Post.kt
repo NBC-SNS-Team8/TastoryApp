@@ -8,14 +8,16 @@ data class Post(
     val profile: Int,
     val thumbnail: Int, // 이미지 필드를 Int 타입으로 변경
     val title: String?,
-    val content: String?
+    val content: String?,
+    val longContent: String?
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         name = parcel.readString(),
         profile = parcel.readInt(),
         thumbnail = parcel.readInt(), // Int 타입으로 읽기
         title = parcel.readString(),
-        content = parcel.readString()
+        content = parcel.readString(),
+        longContent = parcel.readString()
     )
 
     override fun describeContents(): Int = 0
@@ -26,6 +28,7 @@ data class Post(
         parcel.writeInt(thumbnail) // Int 타입으로 쓰기
         parcel.writeString(title)
         parcel.writeString(content)
+        parcel.writeString(longContent)
     }
 
     companion object CREATOR : Parcelable.Creator<Post> {
