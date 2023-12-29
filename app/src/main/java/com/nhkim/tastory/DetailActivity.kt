@@ -33,6 +33,7 @@ class DetailActivity : AppCompatActivity() {
         nickTitle.text = rcPostTitle
         blogContent.text = rcPostContent
         blogImage.setImageResource(receivedPost.thumbnail)
+        blogName.text = rcPostName + getString(R.string.name)
 
         backBtn.setOnClickListener {
             finish()
