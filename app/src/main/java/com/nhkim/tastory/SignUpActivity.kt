@@ -107,7 +107,8 @@ class SignUpActivity : AppCompatActivity() {
 
         editTextSignupId.addTextChangedListener {
             tvIdCheck.setTextColor(Color.RED)
-            if (editTextSignupId.text.toString().trim().isEmpty()) {
+            val inputId = editTextSignupId.text.toString()
+            if (inputId.trim().isEmpty()) {
                 tvIdCheck.text = getString(R.string.error_empty)
 
             } else if (editTextSignupId.text.toString() in alreadyExistIds) {
@@ -151,6 +152,24 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
+        editTextSignupName.addTextChangedListener {
+            tvNameCheck.setTextColor(Color.RED)
+            var inputName = editTextSignupName.text.toString()
+            if (inputName.trim().isEmpty()) {
+                tvNameCheck.text = getString(R.string.error_empty)
+            } else {
+                tvNameCheck.text = ""
+            }
+        }
+
+        editTextSignupBirthYear.addTextChangedListener {
+            tvBirthCheck.setTextColor(Color.RED)
+            val inputBirthYear = editTextSignupBirthYear
+        }
+
+
+
+
         editTextSignupId.setOnFocusChangeListener { v, hasFocus ->
             tvIdCheck.isVisible = true
             if (hasFocus.not()) {
@@ -175,8 +194,11 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
+
+
         //생년월일 날짜 제한, 년도 4자리, 월일 두자리
-        //invalid일 때 버튼 안 눌리게 하는
+        //하나라도 invalid일 때 버튼 안 눌리게 하는 ...변수?를 만들어야 하나
+        //함수 리팩토링은 또 언제 하지...
 
 
 //        btnSignup.isEnabled = false
