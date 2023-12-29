@@ -68,7 +68,7 @@ class FeedActivity : AppCompatActivity() {
 
         showDialog()
 
-        tv_welcome.text = receivedUser?.name + "님 환영합니다!"
+        tv_welcome.text = receivedUser?.name + getString(R.string.welcome)
 //        writer.text = receivedUser?.name
 
         iv_btn_mypage.setOnClickListener{    // 버튼 누르면 마이페이지 화면으로 이동
@@ -103,7 +103,7 @@ class FeedActivity : AppCompatActivity() {
 
         // 제목 설정
         builder.setTitle("\uD83C\uDF8A당첨\uD83C\uDF89")
-        builder.setMessage("\n이벤트 쿠폰 당첨!!\n" +
+        builder.setMessage(getString(R.string.lucky) +
                 "이번 달 신상 맛집 할인 쿠폰을 드립니다. 쿠폰함을 확인해 주세요.")
 
         // 다이얼로그 화면 설정
