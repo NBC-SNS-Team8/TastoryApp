@@ -1,9 +1,12 @@
 package com.nhkim.tastory
 
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -25,6 +28,10 @@ class LoginActivity : AppCompatActivity() {
     }
     private val btnSignupPage: ConstraintLayout by lazy {
         findViewById(R.id.cl_login_signup_btn)
+    }
+
+    private val imgLogo: ImageView by lazy {
+        findViewById(R.id.iv_login_logo)
     }
 
     private var userId: String = ""
@@ -87,5 +94,10 @@ class LoginActivity : AppCompatActivity() {
 
 
     }
+
+//    private fun isDarkMode(mContext: Context): Boolean {
+//        val returnV = false
+//
+//    }
 
 }
