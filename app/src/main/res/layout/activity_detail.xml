@@ -46,7 +46,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:gravity="center"
-                    android:text="OOO님의 블로그"
+                    android:text="@string/blog_owner"
                     android:textSize="20dp"/>
 
             </RelativeLayout>
