@@ -295,7 +295,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
-                    android:text="을지로 주변에 가신다면 꼭 한 번 가봐야하는 막창 맛집!\n언제든 부담없이 가기 좋은 "
+                    android:text="을지로 주변에 가신다면 꼭 한 번 가봐야하는 막창 맛집!\n언제든 부담없이 가기 좋은 편한 분위기를 즐겨보세요.\n회식 장소로도 추천!"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView3" />
