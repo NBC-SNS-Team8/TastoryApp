@@ -22,7 +22,7 @@ class DetailActivity : AppCompatActivity() {
         val receivedUser = intent.getParcelableExtra<User>("USER")
         val receivedPost = intent.getParcelableExtra<Post>("POST")
         val rcPostName = receivedPost?.name.toString()
-        val rcPostImage = receivedPost?.image.toString()
+//        val rcPostImage = receivedPost?.image.toString()
         val rcPostTitle = receivedPost?.title.toString()
         val rcPostContent = receivedPost?.content.toString()
 
