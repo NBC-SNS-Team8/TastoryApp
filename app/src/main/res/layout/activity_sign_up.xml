@@ -75,6 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/tv_back">
 
                 <EditText
@@ -95,17 +96,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="1dp"
                 android:layout_marginEnd="50dp"
-                android:text="ID중복 체크"
-                android:textColor="@color/red" />
+                android:text="@string/check_id"
+                android:textColor="@color/red"
+                android:visibility="invisible" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_signup_pw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/tv_back">
 
                 <EditText
@@ -127,17 +129,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="1dp"
                 android:layout_marginEnd="50dp"
-                android:text="비밀번호 유효성 체크"
-                android:textColor="@color/red" />
+                android:text="@string/check_pw"
+                android:textColor="@color/red"
+                android:visibility="invisible" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_signup_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/tv_back">
 
                 <EditText
@@ -153,12 +156,23 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <TextView
+                android:id="@+id/tv_signup_name_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="50dp"
+                android:text="@string/check_name"
+                android:textColor="@color/red"
+                android:visibility="invisible" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_signup_birth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="50dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/tv_back">
 
 
@@ -232,6 +246,18 @@
                     app:layout_constraintTop_toTopOf="@+id/tv_signup_birth_slash2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_signup_birth_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/check_birth"
+                android:textColor="@color/red"
+                android:visibility="invisible" />
 
         </LinearLayout>
 
