@@ -42,5 +42,6 @@
     <string name="eng_id">ID</string>
     <string name="my_blog">My Posts</string>
     <string name="welcome">Welcome!</string>
+    <string name="lucky">\nWinning an event coupon!\n</string>
 
 </resources>

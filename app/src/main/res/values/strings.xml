@@ -26,6 +26,7 @@
     <string name="check_birth_month">월은 1~12까지입니다.</string>
     <string name="check_birth_day">날짜는 1~31까지입니다.</string>
     <string name="welcome">님 환영합니다!</string>
+    <string name="lucky">\n이벤트 쿠폰 당첨!\n</string>
     <string name="history">히스토리</string>
     <string name="blog_owner"> 님의 블로그</string>
     <string name="steak_script">분위기 좋은 스테이크 맛집</string>
