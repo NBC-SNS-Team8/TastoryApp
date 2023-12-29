@@ -71,10 +71,6 @@ class FeedActivity : AppCompatActivity() {
         tv_welcome.text = receivedUser?.name + "님 환영합니다!"
 //        writer.text = receivedUser?.name
 
-//    if (intent.hasExtra("id")) {
-//        tv_welcome = intent.getStringExtra("id") + "님, 환영합니다!"  // 영정님, id intent 키가 뭔가요?? // "Id"?
-//    }
-
         iv_btn_mypage.setOnClickListener{    // 버튼 누르면 마이페이지 화면으로 이동
             val intent = Intent(this, MyPageActivity::class.java).apply {
                 putExtra("USER", receivedUser)

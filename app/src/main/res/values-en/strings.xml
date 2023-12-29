@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tastory</string>
+    <string name="id">ID</string>
+    <string name="pw">PW</string>
+    <string name="name">name</string>
+    <string name="birth_year">Year</string>
+    <string name="birth_month">Month</string>
+    <string name="birth_day">Day</string>
+    <string name="login_btn">Log in</string>
+    <string name="signup_btn">Sign up</string>
+    <string name="error_empty">Please enter required information.</string>
+    <string name="check_exist_id">A duplicate ID exists. Please enter a different ID.</string>
+    <string name="check_invalid_pw_char">Your password must contain at least one number and uppercase letter.</string>
+    <string name="check_invalid_pw_special">Must contain at least one special character (~!@#$%^&amp;*_-+=`|:;,.?/).</string>
+    <string name="check_invalid_pw_char_han">The password cannot contain Korean consonants or vowels.</string>
+    <string name="check_invalid_pw_length">The password must be at least 8 characters and not more than 20 characters in length.</string>
+    <string name="check_valid_Id">Valid ID</string>
+    <string name="check_valid_pw">Valid PW</string>
+    <string name="toast_login">Login-success</string>
+    <string name="check_id">ID duplicate check</string>
+    <string name="check_pw">Check password validity</string>
+    <string name="check_name">Confirm name entry</string>
+    <string name="check_invalid_name">The name cannot contain special characters.</string>
+    <string name="check_birth">Please enter 4 digits for the year and 2 digits for the month and day.</string>
+    <string name="check_birth_year">Birth years range from 1900 to 2023.</string>
+    <string name="check_birth_month">Month range from 1 to 12.</string>
+    <string name="check_birth_day">Day range from 1 to 12.</string>
+    <string name="blog_owner">" ’s blog"</string>
+    <string name="steak_script">Steakhouse with a good atmosphere</string>
+    <string name="steak_review">Blue Sofa Pasta, a steak restaurant in Yeonnam-dong that is good for a date in Yeonnam-dong. Let me introduce you to a steak restaurant in Yeonnam-dong that has a nice atmosphere and tastes good :) The alley is not crowded and it is not located in the downtown area, so it was not difficult to find! If you bring your car, there is nothing to worry about. There is a public parking lot nearby in Yeonnam-dong, so it wouldn\'t be a bad idea to park there and use it.</string>
+    <string name="date">2023.12.07</string>
+    <string name="update_time">3 hours ago</string>
+    <string name="christmas_restaurant">Recommended Christmas restaurants!</string>
+    <string name="nickname2">Duckman</string>
+    <string name="update_time2">5 hours ago</string>
+    <string name="history">history</string>
+    <string name="christmas_waiting">For Christmas, I\'m going to share my experience of going to a restaurant where you can\'t go without waiting~! This time, I went to a restaurant in Seoul!</string>
+    <string name="review">" The end of 2023 is already here! To celebrate Christmas and the end of the year, we will introduce you to restaurants that are great to visit with your family or loved ones."</string>
+    <string name="mackang_script">Introducing the best Makchang restaurant in Seoul~</string>
+    <string name="info">information</string>
+    <string name="eng_id">ID</string>
+    <string name="my_blog">My Posts</string>
+    <string name="welcome">Welcome!</string>
+
+</resources>

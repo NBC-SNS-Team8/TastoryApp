@@ -29,7 +29,7 @@ class DetailActivity : AppCompatActivity() {
         nickName.text = rcPostName
         nickTitle.text = rcPostTitle
         blogContent.text = rcPostContent
-        blogName.text = rcPostName + "님의 블로그"
+        blogName.text = rcPostName + getString(R.string.name)
 
         backBtn.setOnClickListener {
             finish()
