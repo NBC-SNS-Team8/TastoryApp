@@ -62,7 +62,7 @@ class FeedActivity : AppCompatActivity() {
 
         // 제목 설정
         builder.setTitle("\uD83C\uDF8A당첨\uD83C\uDF89")
-        builder.setMessage("이벤트 쿠폰 당첨!!\n" +
+        builder.setMessage("\n이벤트 쿠폰 당첨!!\n" +
                 "이번 달 신상 맛집 할인 쿠폰을 드립니다. 쿠폰함을 확인해 주세요.")
 
         // 다이얼로그 화면 설정
