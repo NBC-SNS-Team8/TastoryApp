@@ -37,17 +37,6 @@ class LoginActivity : AppCompatActivity() {
 
         initView()
 
-        activityResultLauncher =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-                if (it.resultCode == RESULT_OK) {
-                    userId = it.data?.getStringExtra("Id") ?: ""
-                    val userPw = it.data?.getStringExtra("Pw") ?: ""
-                    userName = it.data?.getStringExtra("Name") ?: ""
-
-                    editTextLoginId.setText(userId)
-                    editTextLoginPw.setText(userPw)
-                }
-            }
 
         btnLogin.setOnClickListener {
             if (editTextLoginId.text.trim().isEmpty() || editTextLoginPw.text.trim().isEmpty()) {
@@ -73,15 +62,28 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        editTextLoginId.addTextChangedListener {
-            if (editTextLoginId.text.toString().isNotBlank()) {
-                //
+
+        activityResultLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode == RESULT_OK) {
+                    userId = it.data?.getStringExtra("Id") ?: ""
+                    val userPw = it.data?.getStringExtra("Pw") ?: ""
+                    userName = it.data?.getStringExtra("Name") ?: ""
+
+                    editTextLoginId.setText(userId)
+                    editTextLoginPw.setText(userPw)
+                }
             }
-        }
 
-        editTextLoginId.setOnFocusChangeListener { v, hasFocus ->
-
-        }
+//        editTextLoginId.addTextChangedListener {
+//            if (editTextLoginId.text.toString().isNotBlank()) {
+//                //
+//            }
+//        }
+//
+//        editTextLoginId.setOnFocusChangeListener { v, hasFocus ->
+//
+//        }
 
 
     }
