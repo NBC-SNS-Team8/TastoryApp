@@ -17,6 +17,8 @@ class FeedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
 
+
+
         val receivedUser = intent.getParcelableExtra<User>("USER")
         val iv_btn_mypage = findViewById<CircleImageView>(R.id.iv_btn_mypage)
         val blogPost = findViewById<ConstraintLayout>(R.id.cl_feed)
@@ -105,6 +107,7 @@ class FeedActivity : AppCompatActivity() {
                 putExtra("USER", receivedUser)
             }
             startActivity(intent)
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
 
 
@@ -115,6 +118,7 @@ class FeedActivity : AppCompatActivity() {
                 putExtra("POST", firstPost)
             }
             startActivity(intent)
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
 
         // 두 번째 게시물 클릭 리스너
@@ -124,6 +128,7 @@ class FeedActivity : AppCompatActivity() {
                 putExtra("POST", secondPost)
             }
             startActivity(intent)
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
 
     }

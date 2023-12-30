@@ -37,6 +37,7 @@ class DetailActivity : AppCompatActivity() {
 
         backBtn.setOnClickListener {
             finish()
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
 
     }
