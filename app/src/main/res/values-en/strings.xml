@@ -30,7 +30,7 @@
     <string name="check_birth_day">Day range from 1 to 12.</string>
 
     //Feed Page
-    <string name="welcome">Welcome!</string>
+    <string name="welcome">, Welcome!</string>
     <string name="history">history</string>
     <string name="update_time">3 hours ago</string>
     <string name="stake_title">Recommended Christmas restaurants!</string>
@@ -40,8 +40,7 @@
 
     //Feed Dialog Page
     <string name="event_pop">🎊Surprise!🎉</string>
-    <string name="event_first_line">\nWinning an event coupon!\n</string>
-    <string name="event_second_line">"We're giving you a coupon for a new restaurant this month."</string>
+    <string name="event_first_line">"We're giving you a coupon for a new restaurant this month."</string>
     <string name="event_pop_close">close</string>
 
     //Detail Page
@@ -56,7 +55,7 @@
     <string name="makchang_review_contents">"So a few days later, I convinced my friend to go again. We went to 'Eulji 1st Mak'.\n\nWe arrived early so there was no wait, but by the time we ate, there was a wait. Honestly, there were many customers who were a little older than our 20s. They all looked like they were coming after work."</string>
 
     //mypage
-    <string name="info">information</string>
+    <string name="info">My information</string>
     <string name="eng_id">ID</string>
     <string name="my_posts">My Posts</string>
 

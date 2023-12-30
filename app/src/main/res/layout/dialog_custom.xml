@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="🎊이벤트 쿠폰 당첨🎉"
+        android:text="@string/event_pop"
         android:layout_marginBottom="16dp"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -21,7 +21,7 @@
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="이번 달 신상 맛집\n할인 쿠폰을 드립니다."
+        android:text="@string/event_first_line"
         android:layout_marginBottom="16dp"
         android:layout_gravity="center"
         android:gravity="center"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="확인"
+        android:text="@string/event_pop_close"
         android:textColor="@color/white"
         android:background="@drawable/rounded_dialog_button"/>
     <View
