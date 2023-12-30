@@ -58,7 +58,7 @@
     <string name="info">My information</string>
     <string name="eng_id">ID</string>
     <string name="my_posts">My Posts</string>
-
+    <string name="my_id">ID:</string>
 
 
 </resources>
