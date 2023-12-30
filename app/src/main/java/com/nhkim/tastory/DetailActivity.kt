@@ -27,13 +27,12 @@ class DetailActivity : AppCompatActivity() {
         val rcPostTitle = receivedPost?.title.toString()
         val rcPostContent = receivedPost?.longContent.toString()
 
-        blogName.text = rcPostName + "님의 블로그"
+        blogName.text = rcPostName + getString(R.string.blog_owner)
         writer.text = rcPostName
         writerProfile.setImageResource(receivedPost!!.profile)
         nickTitle.text = rcPostTitle
         blogContent.text = rcPostContent
         blogImage.setImageResource(receivedPost.thumbnail)
-        blogName.text = rcPostName + getString(R.string.name)
 
         backBtn.setOnClickListener {
             finish()
