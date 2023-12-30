@@ -30,7 +30,6 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="3dp"
                     android:background="@drawable/selector_return_back"
-                    android:padding="20dp"
 
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -73,12 +72,13 @@
             <ScrollView
                 android:id="@+id/sv_inputs"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
+                android:layout_height="match_parent"
+                >
                 <LinearLayout
-                    style="@style/LinearLayoutVertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    style="@style/LinearLayoutVertical"
+                    >
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_id"
@@ -103,10 +103,14 @@
 
                     <TextView
                         android:id="@+id/tv_signup_id_check"
-                        style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_id" />
+                        android:layout_gravity="end"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="50dp"
+                        android:text="@string/check_id"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_pw"
@@ -132,10 +136,14 @@
 
                     <TextView
                         android:id="@+id/tv_signup_pw_check"
-                        style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_pw" />
+                        android:layout_gravity="end"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="50dp"
+                        android:text="@string/check_pw"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_name"
@@ -160,10 +168,14 @@
 
                     <TextView
                         android:id="@+id/tv_signup_name_check"
-                        style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_name" />
+                        android:layout_gravity="end"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="50dp"
+                        android:text="@string/check_name"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_birth"
@@ -247,14 +259,20 @@
 
                     <TextView
                         android:id="@+id/tv_signup_birth_check"
-                        style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="50dp"
                         android:layout_marginBottom="5dp"
-                        android:text="@string/check_birth" />
+                        android:text="@string/check_birth"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
 
                 </LinearLayout>
+
             </ScrollView>
+
 
         </LinearLayout>
 

@@ -76,15 +76,27 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
 
-//        editTextLoginId.addTextChangedListener {
-//            if (editTextLoginId.text.toString().isNotBlank()) {
-//                //
-//            }
-//        }
-//
-//        editTextLoginId.setOnFocusChangeListener { v, hasFocus ->
-//
-//        }
+        editTextLoginId.addTextChangedListener {
+            if (editTextLoginId.text.toString().isBlank()) {
+                //
+            }
+        }
+        editTextLoginPw.addTextChangedListener {
+            if (editTextLoginPw.text.toString().isBlank()) {
+                //
+            }
+        }
+
+        editTextLoginId.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus.not()) {
+
+            }
+
+        }
+
+        editTextLoginPw.setOnFocusChangeListener { v, hasFocus ->
+
+        }
 
 
     }
