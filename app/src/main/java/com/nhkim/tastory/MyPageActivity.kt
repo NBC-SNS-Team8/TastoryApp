@@ -30,7 +30,7 @@ class MyPageActivity : AppCompatActivity() {
         )
 
         blogName.text = receivedUser?.name
-        blogId.text = receivedUser?.id
+        blogId.text = getString(R.string.my_id) + receivedUser?.id
         postImage.clipToOutline = true
 
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/delight_yellow"
     tools:context=".SignUpActivity">
 
 
@@ -38,8 +39,8 @@
 
                     <ImageView
                         android:id="@+id/iv_signup_return"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:adjustViewBounds="true"
                         android:src="@drawable/return_arrow"
 
@@ -56,7 +57,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="0dp"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/tastory_logo_simple"
+                    android:src="@drawable/logo_entire"
 
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -68,7 +69,7 @@
         <LinearLayout
             android:id="@+id/ll_signup_input"
             style="@style/LinearLayoutVertical"
-            android:layout_weight="6.5">
+            android:layout_weight="6">
 
             <ScrollView
                 android:id="@+id/sv_inputs"
@@ -78,14 +79,13 @@
                 <LinearLayout
                     style="@style/LinearLayoutVertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:padding="15dp">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_id"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="50dp"
-                        android:layout_marginTop="5dp"
+                        style="@style/EditLinearStyle"
                         android:background="@drawable/tv_back">
 
                         <EditText
@@ -110,10 +110,7 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_pw"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="50dp"
-                        android:layout_marginTop="15dp"
+                        style="@style/EditLinearStyle"
                         android:background="@drawable/tv_back">
 
                         <EditText
@@ -139,10 +136,7 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="50dp"
-                        android:layout_marginTop="15dp"
+                        style="@style/EditLinearStyle"
                         android:background="@drawable/tv_back">
 
                         <EditText
@@ -167,10 +161,7 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_birth"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="50dp"
-                        android:layout_marginTop="15dp"
+                        style="@style/EditLinearStyle"
                         android:background="@drawable/tv_back">
 
 
@@ -178,7 +169,7 @@
                             android:id="@+id/et_signup_birth_year"
                             style="@style/EditTextBirth"
                             android:layout_width="wrap_content"
-                            android:layout_height="50dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginStart="1dp"
                             android:hint="@string/birth_year"
                             android:maxLength="4"
@@ -207,7 +198,7 @@
                             android:id="@+id/et_signup_birth_month"
                             style="@style/EditTextBirth"
                             android:layout_width="wrap_content"
-                            android:layout_height="50dp"
+                            android:layout_height="wrap_content"
                             android:hint="@string/birth_month"
 
                             app:layout_constraintBottom_toBottomOf="@+id/tv_signup_birth_slash1"
@@ -233,7 +224,7 @@
                             android:id="@+id/et_signup_birth_day"
                             style="@style/EditTextBirth"
                             android:layout_width="wrap_content"
-                            android:layout_height="50dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginEnd="1dp"
                             android:hint="@string/birth_day"
 
@@ -262,22 +253,20 @@
             android:id="@+id/ll_signup_btn"
             style="@style/LinearLayoutVertical"
             android:layout_weight="2.5"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="20dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_signup_btn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/selector_btn_back">
 
                 <TextView
                     android:id="@+id/tv_signup_btn"
                     style="@style/BtnText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/signup_btn"
-
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

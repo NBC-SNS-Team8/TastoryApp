@@ -57,5 +57,6 @@
     <string name="eng_id" translatable="false">ID</string>
     <string name="my_posts">나의 글</string>
     <string name="christmas_waiting">"크리스마스를 맞아 웨이팅 없이는 갈 수 없는 맛집에 다녀온 후기를 들려드리려고 합니다~! 이번에 제가 다녀온 곳은 서울의 어느 한 레스토랑인데요!"</string>
+    <string name="my_id">ID:</string>
 
 </resources>

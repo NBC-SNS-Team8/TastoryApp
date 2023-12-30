@@ -102,6 +102,12 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/dark_brown"/>
+
             <include layout="@layout/feed_item" android:id="@+id/feed_item1" />
             <include layout="@layout/feed_item" android:id="@+id/feed_item2" />
 

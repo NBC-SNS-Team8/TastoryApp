@@ -137,23 +137,23 @@ class FeedActivity : AppCompatActivity() {
         }
 
         historyImage1.setOnClickListener{
-            showHistoryDialog()
+            showHistoryDialog(R.drawable.pizza)
         }
 
         historyImage2.setOnClickListener{
-            showHistoryDialog()
+            showHistoryDialog(R.drawable.cake)
         }
 
         historyImage3.setOnClickListener{
-            showHistoryDialog()
+            showHistoryDialog(R.drawable.chicken)
         }
 
         historyImage4.setOnClickListener{
-            showHistoryDialog()
+            showHistoryDialog(R.drawable.ramen)
         }
 
         historyImage5.setOnClickListener{
-            showHistoryDialog()
+            showHistoryDialog(R.drawable.noodle)
         }
 
     }
@@ -173,11 +173,15 @@ class FeedActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    fun showHistoryDialog() {
+    fun showHistoryDialog(imageResId: Int) {
 
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.dialog_history)
+        dialog.setCanceledOnTouchOutside(true)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val imageView = dialog.findViewById<ImageView>(R.id.dg_image) // yourImageViewId는 dialog_history.xml에 있는 ImageView의 ID
+        imageView.setImageResource(imageResId)
 
         dialog.show()
     }

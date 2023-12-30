@@ -25,16 +25,6 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent">
 
-                    <!--                <ImageView-->
-                    <!--                    android:layout_width="match_parent"-->
-                    <!--                    android:layout_height="match_parent"-->
-                    <!--                    android:scaleType="centerCrop"-->
-                    <!--                    android:src="@drawable/bright"-->
-                    <!--                    app:layout_constraintStart_toStartOf="parent"-->
-                    <!--                    app:layout_constraintTop_toTopOf="parent" />-->
-
-
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="450dp"
@@ -57,7 +47,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="340dp"
                             android:text="@string/blog_owner"
-                            android:textColor="@color/white"
+                            android:textColor="@color/brown"
                             android:textSize="23sp"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -71,8 +61,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:text="@string/info"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
+                            android:textColor="@color/brown"
+                            android:textSize="18sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tv_blog_name" />
 
@@ -82,8 +72,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:text="@string/eng_id"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
+                            android:textColor="@color/brown"
+                            android:textSize="18sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tv_blog_info" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
