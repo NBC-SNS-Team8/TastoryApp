@@ -46,7 +46,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:gravity="center"
-                    android:text="OOO님의 블로그"
+                    android:text="@string/blog_owner"
                     android:textSize="20dp"/>
 
             </RelativeLayout>
@@ -133,7 +133,7 @@
                 android:layout_marginTop="10dp"
                 android:padding="40dp"
                 android:gravity="center"
-                android:text="@string/steak_review"
+                android:text="@string/steak_review_contents"
                 android:textSize="16sp" />
 
 

@@ -34,6 +34,7 @@
                     <!--                    app:layout_constraintTop_toTopOf="parent" />-->
 
 
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="450dp"
@@ -55,7 +56,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="340dp"
-                            android:text="이름님의 블로그"
+                            android:text="@string/blog_owner"
                             android:textColor="@color/white"
                             android:textSize="23sp"
                             android:textStyle="bold"
@@ -80,7 +81,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
-                            android:text="ID"
+                            android:text="@string/eng_id"
                             android:textColor="@color/white"
                             android:textSize="20sp"
                             app:layout_constraintStart_toStartOf="parent"
@@ -108,8 +109,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_marginStart="56dp"
+                    android:text="@string/my_posts"
                     android:layout_marginTop="30dp"
-                    android:text="@string/my_blog"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -143,8 +144,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="8dp"
-                        android:text="@string/christmas_restaurant"
                         android:maxLines="2"
+                        android:text="@string/stake_title"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
