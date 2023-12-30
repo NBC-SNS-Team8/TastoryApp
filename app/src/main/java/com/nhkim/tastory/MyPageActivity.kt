@@ -16,6 +16,8 @@ class MyPageActivity : AppCompatActivity() {
         val blogName = findViewById<TextView>(R.id.tv_blog_name)
         val blogId = findViewById<TextView>(R.id.tv_blog_id)
         val receivedUser = intent.getParcelableExtra<User>("USER")
+        val myPost = findViewById<ConstraintLayout>(R.id.my_post)
+        val postImage = findViewById<ImageView>(R.id.my_post_image)
 
         val firstPost = Post(
             receivedUser?.name,
@@ -28,8 +30,7 @@ class MyPageActivity : AppCompatActivity() {
 
         blogName.text = receivedUser?.name
         blogId.text = receivedUser?.id
-
-        val myPost = findViewById<ConstraintLayout>(R.id.my_post)
+        postImage.clipToOutline = true
 
 
         xIcon.setOnClickListener {

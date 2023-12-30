@@ -1,14 +1,20 @@
 package com.nhkim.tastory
 
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import de.hdodenhof.circleimageview.CircleImageView
+import org.w3c.dom.Text
 
 class FeedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -89,10 +95,7 @@ class FeedActivity : AppCompatActivity() {
         blogTitle2.text = secondPost.title
         blogContent2.text = secondPost.content
 
-        feedItem1.tag = "firstPost"
-        feedItem2.tag = "secondPost"
-
-        showDialog()
+        showCustomDialog()
 
         tv_welcome.text = receivedUser?.name + getString(R.string.welcome)
 
@@ -103,6 +106,7 @@ class FeedActivity : AppCompatActivity() {
                 putExtra("USER", receivedUser)
             }
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_left_enter,R.anim.slide_left_exit)
         }
 
 
@@ -124,27 +128,51 @@ class FeedActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-    }
-
-    private fun showDialog() {
-        // AlertDialog 초기화
-        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-
-        // 제목 설정
-        builder.setTitle(getString(R.string.event_pop))
-        builder.setMessage(getString(R.string.event_first_line) +
-                getString(R.string.event_second_line))
-
-        // 다이얼로그 화면 설정
-        val inflater: LayoutInflater = layoutInflater
-        builder.setView(inflater.inflate(R.layout.custom_dialog, null))
-
-        // 닫기 이벤트
-        builder.setPositiveButton(getString(R.string.event_pop_close)) {
-                Dialog, p1 -> Dialog.cancel()
+        historyImage1.setOnClickListener{
+            showHistoryDialog()
         }
 
-        val alertDialog: AlertDialog = builder.create()
-        alertDialog.show()
+        historyImage2.setOnClickListener{
+            showHistoryDialog()
+        }
+
+        historyImage3.setOnClickListener{
+            showHistoryDialog()
+        }
+
+        historyImage4.setOnClickListener{
+            showHistoryDialog()
+        }
+
+        historyImage5.setOnClickListener{
+            showHistoryDialog()
+        }
+
     }
+
+    fun showCustomDialog() {
+
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.dialog_custom)
+        dialog.setCanceledOnTouchOutside(false)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val closeButton = dialog.findViewById<Button>(R.id.btn_close)
+        closeButton.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
+    fun showHistoryDialog() {
+
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.dialog_history)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        dialog.show()
+    }
+
+
 }
