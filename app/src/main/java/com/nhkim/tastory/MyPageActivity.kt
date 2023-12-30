@@ -12,6 +12,7 @@ class MyPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_page)
 
+
         val xIcon = findViewById<ImageView>(R.id.x_icon)
         val blogName = findViewById<TextView>(R.id.tv_blog_name)
         val blogId = findViewById<TextView>(R.id.tv_blog_id)
@@ -35,6 +36,7 @@ class MyPageActivity : AppCompatActivity() {
 
         xIcon.setOnClickListener {
             finish()
+            overridePendingTransition(R.anim.slide_down_enter, R.anim.slide_down_exit)
         }
 
         myPost.setOnClickListener {
@@ -43,7 +45,7 @@ class MyPageActivity : AppCompatActivity() {
                 putExtra("POST", firstPost)
             }
             startActivity(intent)
-
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
     }
 

@@ -314,6 +314,7 @@ class SignUpActivity : AppCompatActivity() {
 
         btnReturn.setOnClickListener {
             finish()
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
 
         btnSignup.setOnClickListener {
@@ -331,6 +332,7 @@ class SignUpActivity : AppCompatActivity() {
             }
             setResult(RESULT_OK, intent)
             if (!isFinishing) finish()
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
 
 

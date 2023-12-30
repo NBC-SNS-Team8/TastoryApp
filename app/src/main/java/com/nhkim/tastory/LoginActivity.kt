@@ -47,15 +47,16 @@ class LoginActivity : AppCompatActivity() {
                     putExtra("USER", user)
                 }
                 startActivity(intent)
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout)
 
-            }
+                 }
 
         }
 
         btnSignupPage.setOnClickListener {
             var intent = Intent(this, SignUpActivity::class.java)
             activityResultLauncher.launch(intent)
-
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
 
 
@@ -99,5 +100,7 @@ class LoginActivity : AppCompatActivity() {
 
 
     }
+
+
 
 }
