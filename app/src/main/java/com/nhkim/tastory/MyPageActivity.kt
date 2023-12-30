@@ -36,7 +36,7 @@ class MyPageActivity : AppCompatActivity() {
 
         xIcon.setOnClickListener {
             finish()
-            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
+            overridePendingTransition(R.anim.slide_down_enter, R.anim.slide_down_exit)
         }
 
         myPost.setOnClickListener {

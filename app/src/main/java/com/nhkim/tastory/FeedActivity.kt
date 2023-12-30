@@ -107,7 +107,7 @@ class FeedActivity : AppCompatActivity() {
                 putExtra("USER", receivedUser)
             }
             startActivity(intent)
-            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
+            overridePendingTransition(R.anim.slide_up_enter, R.anim.slide_up_exit)
         }
 
 
