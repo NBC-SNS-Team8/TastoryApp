@@ -187,6 +187,10 @@ class FeedActivity : AppCompatActivity() {
         val imageView = dialog.findViewById<ImageView>(R.id.dg_image) // yourImageViewId는 dialog_history.xml에 있는 ImageView의 ID
         imageView.setImageResource(imageResId)
 
+        imageView.setOnClickListener {
+            dialog.dismiss()
+        }
+
         dialog.show()
     }
 
