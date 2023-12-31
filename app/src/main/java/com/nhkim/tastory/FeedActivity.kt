@@ -101,6 +101,10 @@ class FeedActivity : AppCompatActivity() {
 
         tv_welcome.text = receivedUser?.name + getString(R.string.welcome)
 
+        if (tv_welcome.text.toString().length > 15) {
+            tv_welcome.isSelected = true    //marquee 이름이 너무 길면 한줄로 흘러가게 하기
+        }
+
 //        writer.text = receivedUser?.name
 
         iv_btn_mypage.setOnClickListener{    // 버튼 누르면 마이페이지 화면으로 이동
