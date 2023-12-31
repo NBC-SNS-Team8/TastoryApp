@@ -12,7 +12,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbars="none"
+        android:overScrollMode="never">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,16 +26,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@color/delight_yellow">
+                android:background="@color/dark_brown">
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="22dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="18dp"
                     app:srcCompat="@drawable/return_arrow" />
 
                 <TextView
@@ -46,9 +48,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:gravity="center"
-                    android:text="OOO님의 블로그"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:text="@string/blog_owner"
+                    android:textSize="20dp"/>
 
             </RelativeLayout>
 
@@ -60,39 +61,37 @@
 
                 <TextView
                     android:id="@+id/tv_blog_title"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="28dp"
-                    android:text="분위기 좋은 스테이크 맛집"
-                    android:textSize="24sp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/steak_script"
+                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.12"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_nick_name"
+                    android:id="@+id/tv_writer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:text="닉네임"
-                    android:textSize="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/name"
+                    android:textSize="16dp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.283"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_writer_profile"
                     app:layout_constraintTop_toBottomOf="@+id/tv_blog_title" />
-
 
                 <TextView
                     android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2023.12.07"
-                    android:textSize="20dp"
-                    app:layout_constraintStart_toStartOf="@+id/tv_nick_name"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_nick_name" />
+                    android:text="@string/date"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_writer"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_writer" />
 
                 <View
                     android:id="@+id/view"
@@ -100,31 +99,30 @@
                     android:layout_height="2dp"
                     android:layout_marginTop="20dp"
                     android:background="@color/light_gray"
-                    app:layout_constraintBottom_toTopOf="@+id/iv_blog_image"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_nick_name"
-                    app:layout_constraintVertical_bias="0.117"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_date"
                     tools:layout_editor_absoluteX="30dp" />
 
                 <ImageView
                     android:id="@+id/iv_blog_image"
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="20dp"
                     android:scaleType="centerCrop"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.493"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_nick_name"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
                     app:srcCompat="@drawable/steak" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circularImageView"
+                    android:id="@+id/iv_writer_profile"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="28dp"
                     android:src="@drawable/bright"
-                    app:layout_constraintEnd_toStartOf="@+id/tv_nick_name"
-                    app:layout_constraintHorizontal_bias="0.638"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_writer"
+                    app:layout_constraintHorizontal_bias="0.432"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_blog_title" />
 
@@ -137,8 +135,8 @@
                 android:layout_marginTop="10dp"
                 android:padding="40dp"
                 android:gravity="center"
-                android:text="연남동데이트하기 좋은 \n연남동 스테이크 맛집 블루쇼파스타\n\n분위기 있고, 맛도 좋은 연남동스테이크 맛집을 소개해드릴게요 :)\n\n골목이 복잡하지 않고\n번화가쪽에 위치하고 있는 것이 \n아니라 찾기 어렵지 않았어요!\n\n 차를 가지고 오셔도 걱정하실 것이 없는 게 근처에 연남동 공영주차장이 있어서\n거기에 주차를 하고 와서 이용하기에도 나쁘지 않을 것 같았어요."
-                android:textSize="20sp" />
+                android:text="@string/steak_review_contents"
+                android:textSize="16sp" />
 
 
         </LinearLayout>

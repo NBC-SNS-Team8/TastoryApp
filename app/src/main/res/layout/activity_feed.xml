@@ -13,25 +13,23 @@
 
         <ImageView
             android:id="@+id/iv_logo"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="28dp"
             android:scaleType="fitXY"
-            android:src="@drawable/tastory_logo_simple"
+            android:src="@drawable/logo_entire"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_btn_mypage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="24dp"
-            android:background="@android:color/white"
-            android:scaleType="fitXY"
-            android:src="@drawable/btn_mypage"
+            android:src="@drawable/profile1"
             app:layout_constraintBottom_toBottomOf="@+id/tv_welcome"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_welcome"
@@ -44,8 +42,7 @@
             android:layout_marginStart="24dp"
             android:gravity="right"
             android:text=""
-            android:textSize="18dp"
-            android:textStyle="bold"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/iv_logo"
             app:layout_constraintEnd_toStartOf="@+id/iv_btn_mypage"
             app:layout_constraintStart_toEndOf="@+id/iv_logo"
@@ -56,7 +53,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="32dp">
+        android:layout_margin="10dp"
+        android:scrollbars="none"
+        android:overScrollMode="never">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,15 +68,13 @@
 
                 <TextView
                     android:id="@+id/tv_history"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="히스토리"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/history"
                     android:textColor="@color/brown"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,6 +85,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_history"
+                    android:scrollbars="none"
+                    android:overScrollMode="never"
                     android:layout_marginTop="10dp">
 
                     <LinearLayout
@@ -100,215 +99,21 @@
                         <include layout="@layout/history_item" android:id="@+id/history_item3" />
                         <include layout="@layout/history_item" android:id="@+id/history_item4" />
                         <include layout="@layout/history_item" android:id="@+id/history_item5" />
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_pizza"-->
-<!--                            android:layout_width="110dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_marginStart="16dp"-->
-<!--                            android:scaleType="centerCrop"-->
-<!--                            android:src="@drawable/pizza" />-->
 
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_cake"-->
-<!--                            android:layout_width="110dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_marginStart="8dp"-->
-<!--                            android:scaleType="centerCrop"-->
-<!--                            android:src="@drawable/cake" />-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_chicken"-->
-<!--                            android:layout_width="110dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_marginStart="8dp"-->
-<!--                            android:scaleType="centerCrop"-->
-<!--                            android:src="@drawable/chicken" />-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_ramen"-->
-<!--                            android:layout_width="110dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_marginStart="8dp"-->
-<!--                            android:scaleType="centerCrop"-->
-<!--                            android:src="@drawable/ramen" />-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_noodle"-->
-<!--                            android:layout_width="110dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_marginStart="8dp"-->
-<!--                            android:scaleType="centerCrop"-->
-<!--                            android:src="@drawable/noodle" />-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_pork"-->
-<!--                            android:layout_width="110dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_marginStart="8dp"-->
-<!--                            android:scaleType="centerCrop"-->
-<!--                            android:src="@drawable/pork" />-->
                     </LinearLayout>
 
                 </HorizontalScrollView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <include layout="@layout/feed_item1" android:id="@+id/feed_item1" />
-            <include layout="@layout/feed_item1" android:id="@+id/feed_item2" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/dark_brown"/>
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/cl_feed"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content">-->
-
-<!--                <ImageView-->
-<!--                    android:id="@+id/iv_account"-->
-<!--                    android:layout_width="40dp"-->
-<!--                    android:layout_height="40dp"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_marginTop="32dp"-->
-<!--                    android:src="@drawable/account"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/tv_chopa"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="8dp"-->
-<!--                    android:text="쵸파"-->
-<!--                    android:textColor="@color/brown"-->
-<!--                    android:textSize="18dp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    app:layout_constraintStart_toEndOf="@+id/iv_account"-->
-<!--                    app:layout_constraintTop_toTopOf="@+id/iv_account" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/tv_time1"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="8dp"-->
-<!--                    android:text="3시간 전"-->
-<!--                    app:layout_constraintBottom_toBottomOf="@+id/iv_account"-->
-<!--                    app:layout_constraintStart_toEndOf="@+id/iv_account"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/tv_chopa" />-->
-
-<!--                <ImageView-->
-<!--                    android:id="@+id/iv_steak2"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="220dp"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:layout_marginEnd="16dp"-->
-<!--                    android:scaleType="centerCrop"-->
-<!--                    android:src="@drawable/steak"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/iv_account" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/textView"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:layout_marginEnd="16dp"-->
-<!--                    android:text="크리스마스 추천 맛집!"-->
-<!--                    android:textStyle="bold"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/iv_steak2" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/textView2"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:layout_marginEnd="16dp"-->
-<!--                    android:text="벌써 2023년 연말이 다가왔습니다~! \n크리스마스와 연말을 맞아 가족 혹은 연인과 함께 방문하기 좋은 맛집을 소개해 드릴게요."-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/textView" />-->
-
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/cl_feed2"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content">-->
-
-<!--                <ImageView-->
-<!--                    android:id="@+id/iv_account2"-->
-<!--                    android:layout_width="40dp"-->
-<!--                    android:layout_height="40dp"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_marginTop="16dp"-->
-<!--                    android:src="@drawable/account"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/tv_duckman"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="8dp"-->
-<!--                    android:text="덕만"-->
-<!--                    android:textSize="18dp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:textColor="@color/brown"-->
-<!--                    app:layout_constraintStart_toEndOf="@+id/iv_account2"-->
-<!--                    app:layout_constraintTop_toTopOf="@+id/iv_account2" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/tv_time2"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="8dp"-->
-<!--                    android:text="5시간 전"-->
-<!--                    app:layout_constraintBottom_toBottomOf="@+id/iv_account2"-->
-<!--                    app:layout_constraintStart_toEndOf="@+id/iv_account2"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/tv_duckman" />-->
-
-<!--                <ImageView-->
-<!--                    android:id="@+id/iv_makchang2"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="220dp"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:layout_marginEnd="16dp"-->
-<!--                    android:scaleType="centerCrop"-->
-<!--                    android:src="@drawable/makchang"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/iv_account2" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/textView3"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:layout_marginEnd="16dp"-->
-<!--                    android:text="서울 막창 맛집을 소개합니다~"-->
-<!--                    android:textStyle="bold"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/iv_makchang2" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/textView4"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:layout_marginEnd="16dp"-->
-<!--                    android:text="을지로 주변에 가신다면 꼭 한 번 가봐야하는 막창 맛집!\n언제든 부담없이 가기 좋은 편한 분위기를 즐겨보세요.\n회식 장소로도 추천!"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
-
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+            <include layout="@layout/feed_item" android:id="@+id/feed_item1" />
+            <include layout="@layout/feed_item" android:id="@+id/feed_item2" />
 
         </LinearLayout>
 

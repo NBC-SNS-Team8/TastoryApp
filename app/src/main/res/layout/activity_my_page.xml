@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_brown"
     tools:context=".MyPageActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,21 +24,13 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/bright"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="450dp"
+                        android:background="@color/dark_brown">
 
                         <ImageView
                             android:id="@+id/x_icon"
@@ -53,8 +48,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="340dp"
-                            android:text="이름님의 블로그"
-                            android:textColor="@color/white"
+                            android:text="@string/blog_owner"
+                            android:textColor="@color/brown"
                             android:textSize="23sp"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -67,9 +62,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
-                            android:text="정보"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
+                            android:text="@string/info"
+                            android:textColor="@color/brown"
+                            android:textSize="18sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tv_blog_name" />
 
@@ -78,28 +73,27 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
-                            android:text="ID"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
+                            android:text="@string/eng_id"
+                            android:textColor="@color/brown"
+                            android:textSize="18sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tv_blog_info" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginTop="30dp"
-                android:background="@android:color/black"/>
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0.5dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:background="@android:color/black"/>-->
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/rounded_corners">
+                android:layout_height="400dp"
+                android:background="@drawable/rounded_corners"
+                android:padding="10dp">
 
                 <TextView
                     android:id="@+id/textView5"
@@ -107,26 +101,29 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_marginStart="56dp"
-                    android:layout_marginTop="28dp"
-                    android:text="나의 글"
+                    android:text="@string/my_posts"
+                    android:layout_marginTop="30dp"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout"
+                    android:id="@+id/my_post"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView5">
 
                     <ImageView
-                        android:id="@+id/imageView1"
+                        android:id="@+id/my_post_image"
                         android:layout_width="115dp"
                         android:layout_height="100dp"
                         android:layout_marginStart="10dp"
+                        android:background="@drawable/rounded_history_corners"
+                        android:clipToOutline="true"
                         android:scaleType="centerCrop"
                         android:src="@drawable/steak"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -135,14 +132,17 @@
 
                     <TextView
                         android:id="@+id/textView1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="12dp"
-                        android:textStyle="bold"
-                        android:text="크리스마스 추천 맛집!"
+                        android:layout_marginTop="8dp"
+                        android:maxLines="2"
+                        android:text="@string/stake_title"
                         android:textSize="18sp"
-                        app:layout_constraintStart_toEndOf="@+id/imageView1"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/my_post_image"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -152,15 +152,25 @@
                         android:layout_marginBottom="10dp"
                         android:ellipsize="end"
                         android:maxLines="3"
-                        android:text="크리스마스를 맞아 웨이팅 없이는 갈 수 없는 맛집에 다녀온 후기를 들려드리려고 합니다~! 이번에 제가 다녀온 곳은 서울의 어느 한 레스토랑인데요!"
+                        android:text="@string/christmas_waiting"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@+id/textView1"
-                        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView1"
+                        app:layout_constraintVertical_bias="0.476" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_post" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

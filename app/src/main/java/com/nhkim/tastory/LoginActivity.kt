@@ -1,12 +1,9 @@
 package com.nhkim.tastory
 
-import android.content.Context
 import android.content.Intent
-import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -30,10 +27,6 @@ class LoginActivity : AppCompatActivity() {
         findViewById(R.id.cl_login_signup_btn)
     }
 
-    private val imgLogo: ImageView by lazy {
-        findViewById(R.id.iv_login_logo)
-    }
-
     private var userId: String = ""
     private var userName: String = ""
 
@@ -54,15 +47,16 @@ class LoginActivity : AppCompatActivity() {
                     putExtra("USER", user)
                 }
                 startActivity(intent)
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout)
 
-            }
+                 }
 
         }
 
         btnSignupPage.setOnClickListener {
             var intent = Intent(this, SignUpActivity::class.java)
             activityResultLauncher.launch(intent)
-
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
 
 
@@ -82,22 +76,31 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
 
-//        editTextLoginId.addTextChangedListener {
-//            if (editTextLoginId.text.toString().isNotBlank()) {
-//                //
-//            }
-//        }
-//
-//        editTextLoginId.setOnFocusChangeListener { v, hasFocus ->
-//
-//        }
+        editTextLoginId.addTextChangedListener {
+            if (editTextLoginId.text.toString().isBlank()) {
+                //
+            }
+        }
+        editTextLoginPw.addTextChangedListener {
+            if (editTextLoginPw.text.toString().isBlank()) {
+                //
+            }
+        }
+
+        editTextLoginId.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus.not()) {
+
+            }
+
+        }
+
+        editTextLoginPw.setOnFocusChangeListener { v, hasFocus ->
+
+        }
 
 
     }
 
-//    private fun isDarkMode(mContext: Context): Boolean {
-//        val returnV = false
-//
-//    }
+
 
 }

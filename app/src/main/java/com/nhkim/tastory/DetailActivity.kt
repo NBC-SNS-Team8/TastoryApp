@@ -14,7 +14,8 @@ class DetailActivity : AppCompatActivity() {
 
         val backBtn = findViewById<ImageView>(R.id.imageView)
         val blogName = findViewById<TextView>(R.id.tv_blog_name)
-        val nickName = findViewById<TextView>(R.id.tv_nick_name)
+        val writer = findViewById<TextView>(R.id.tv_writer)
+        val writerProfile = findViewById<ImageView>(R.id.iv_writer_profile)
         val nickTitle = findViewById<TextView>(R.id.tv_blog_title)
         val blogContent = findViewById<TextView>(R.id.tv_blog_content)
         val blogImage = findViewById<ImageView>(R.id.iv_blog_image)
@@ -22,17 +23,20 @@ class DetailActivity : AppCompatActivity() {
         val receivedUser = intent.getParcelableExtra<User>("USER")
         val receivedPost = intent.getParcelableExtra<Post>("POST")
         val rcPostName = receivedPost?.name.toString()
-//        val rcPostImage = receivedPost?.image.toString()
+        val rcPostImage = receivedPost?.thumbnail.toString()
         val rcPostTitle = receivedPost?.title.toString()
-        val rcPostContent = receivedPost?.content.toString()
+        val rcPostContent = receivedPost?.longContent.toString()
 
-        nickName.text = rcPostName
+        blogName.text = rcPostName + getString(R.string.blog_owner)
+        writer.text = rcPostName
+        writerProfile.setImageResource(receivedPost!!.profile)
         nickTitle.text = rcPostTitle
         blogContent.text = rcPostContent
-        blogName.text = rcPostName + "님의 블로그"
+        blogImage.setImageResource(receivedPost.thumbnail)
 
         backBtn.setOnClickListener {
             finish()
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
 
     }
