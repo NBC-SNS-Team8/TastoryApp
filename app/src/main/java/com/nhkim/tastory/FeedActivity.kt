@@ -101,8 +101,8 @@ class FeedActivity : AppCompatActivity() {
 
         tv_welcome.text = receivedUser?.name + getString(R.string.welcome)
 
-        if (tv_welcome.text.toString().length > 15) {
-            tv_welcome.isSelected = true    //marquee 이름이 너무 길면 한줄로 흘러가게 하기
+        if (tv_welcome.text.toString().length > 10) {
+            tv_welcome.isSelected = true    //marquee 이름이 길면 한줄로 흘러가게 하기
         }
 
 //        writer.text = receivedUser?.name
