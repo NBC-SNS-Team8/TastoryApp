@@ -88,7 +88,11 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_id"
                         style="@style/EditLinearStyle"
-                        android:background="@drawable/tv_back">
+                        android:background="@drawable/tv_back"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_signup_id_check"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed">
 
                         <EditText
                             android:id="@+id/et_signup_id"
@@ -108,12 +112,18 @@
                         style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_id" />
+                        android:text="@string/check_id"
+                        app:layout_constraintBottom_toTopOf="@+id/cl_signup_pw"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_signup_id" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_pw"
                         style="@style/EditLinearStyle"
-                        android:background="@drawable/tv_back">
+                        android:background="@drawable/tv_back"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_signup_pw_check"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_signup_id_check">
 
                         <EditText
                             android:id="@+id/et_signup_pw"
@@ -134,12 +144,18 @@
                         style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_pw" />
+                        android:text="@string/check_pw"
+                        app:layout_constraintBottom_toTopOf="@+id/cl_signup_name"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_signup_pw" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_name"
                         style="@style/EditLinearStyle"
-                        android:background="@drawable/tv_back">
+                        android:background="@drawable/tv_back"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_signup_name_check"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_signup_pw_check">
 
                         <EditText
                             android:id="@+id/et_signup_name"
@@ -159,12 +175,18 @@
                         style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_name" />
+                        android:text="@string/check_name"
+                        app:layout_constraintBottom_toTopOf="@+id/cl_signup_birth"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_signup_name" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_birth"
                         style="@style/EditLinearStyle"
-                        android:background="@drawable/tv_back">
+                        android:background="@drawable/tv_back"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_signup_birth_check"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_signup_name_check">
 
 
                         <EditText
@@ -244,7 +266,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="@string/check_birth" />
+                        android:text="@string/check_birth"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_signup_birth" />
 
                 </LinearLayout>
             </ScrollView>
