@@ -21,8 +21,6 @@ class FeedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
 
-
-
         val receivedUser = intent.getParcelableExtra<User>("USER")
         val iv_btn_mypage = findViewById<CircleImageView>(R.id.iv_btn_mypage)
         val blogPost = findViewById<ConstraintLayout>(R.id.cl_feed)
@@ -115,10 +113,7 @@ class FeedActivity : AppCompatActivity() {
 
             overridePendingTransition(R.anim.slide_up_enter, R.anim.slide_up_exit)
 
-           
-
         }
-
 
         // 첫 번째 게시물 클릭 리스너
         feedItem1.setOnClickListener {
