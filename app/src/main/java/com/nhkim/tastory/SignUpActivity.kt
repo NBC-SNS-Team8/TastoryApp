@@ -150,7 +150,7 @@ class SignUpActivity : AppCompatActivity() {
 
             editTextSignupId -> {
 
-                tvIdCheck.setTextColor(Color.RED)
+                tvIdCheck.setTextColor(Color.parseColor("#F46767"))
                 tvIdCheck.isVisible = true
                 validId = false
 
@@ -161,7 +161,7 @@ class SignUpActivity : AppCompatActivity() {
                 } else if (inputId in alreadyExistIds) {
                     tvIdCheck.text = getString(R.string.check_exist_id)
                 } else {
-                    tvIdCheck.setTextColor(Color.GREEN)
+                    tvIdCheck.setTextColor(Color.parseColor("#0069FF"))
                     tvIdCheck.text = getString(R.string.check_valid_Id)
                     validId = true
                 }
@@ -169,7 +169,7 @@ class SignUpActivity : AppCompatActivity() {
 
             editTextSignupPw -> {
 
-                tvPwCheck.setTextColor(Color.RED)
+                tvPwCheck.setTextColor(Color.parseColor("#F46767"))
                 tvPwCheck.isVisible = true
                 validPw = false
 
@@ -201,7 +201,7 @@ class SignUpActivity : AppCompatActivity() {
                     }
 
                     else -> {
-                        tvPwCheck.setTextColor(Color.GREEN)
+                        tvPwCheck.setTextColor(Color.parseColor("#0069FF"))
                         tvPwCheck.text = getString(R.string.check_valid_pw)
                         validPw = true
                     }
@@ -210,7 +210,7 @@ class SignUpActivity : AppCompatActivity() {
 
             editTextSignupName -> {
 
-                tvNameCheck.setTextColor(Color.RED)
+                tvNameCheck.setTextColor(Color.parseColor("#F46767"))
                 tvNameCheck.isVisible = true
                 validName = false
 
