@@ -70,7 +70,7 @@ class SignUpActivity : AppCompatActivity() {
 
     //ID 중복 체크를 하기 위해 이미 등록되어 있는 가상의 아이디 리스트를 만들어 둠
     private val alreadyExistIds =
-        listOf("chopa12", "dm_29", "Id23", "nhKim", "ga_hyun", "you_jm", "cyjTired")
+        listOf("chopa12", "dm_29", "Id23", "nhKim", "ga_hyun", "you_jm", "cyjTired", "dup", "abc")
 
 
     //각 editText에 입력된 값의 유효성을 체크하는 변수
@@ -201,9 +201,10 @@ class SignUpActivity : AppCompatActivity() {
                         tvPwCheck.text = getString(R.string.error_empty)
                     }
 
-                    regEn.containsMatchIn(inputPw).not() -> {
-                        tvPwCheck.text = getString(R.string.check_invalid_pw_char)
-                    }
+                    //비밀번호 쓰기 너무 복잡해서 영문대문자 일단 제외
+//                    regEn.containsMatchIn(inputPw).not() -> {
+//                        tvPwCheck.text = getString(R.string.check_invalid_pw_char)
+//                    }
 
                     regNum.containsMatchIn(inputPw).not() -> {
                         tvPwCheck.text = getString(R.string.check_invalid_pw_char)
