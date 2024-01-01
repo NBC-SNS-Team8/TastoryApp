@@ -20,10 +20,8 @@ class DetailActivity : AppCompatActivity() {
         val blogContent = findViewById<TextView>(R.id.tv_blog_content)
         val blogImage = findViewById<ImageView>(R.id.iv_blog_image)
 
-        val receivedUser = intent.getParcelableExtra<User>("USER")
         val receivedPost = intent.getParcelableExtra<Post>("POST")
         val rcPostName = receivedPost?.name.toString()
-        val rcPostImage = receivedPost?.thumbnail.toString()
         val rcPostTitle = receivedPost?.title.toString()
         val rcPostContent = receivedPost?.longContent.toString()
 
