@@ -5,7 +5,7 @@
 
 ### 📌 와이어 프레임
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/83c75a39-3aba-4ba4-a792-7aefe4b07895/cd2a3a46-6146-48d0-a4fe-90f188ef83c5/Untitled.png)
+[![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/83c75a39-3aba-4ba4-a792-7aefe4b07895/cd2a3a46-6146-48d0-a4fe-90f188ef83c5/Untitled.png)](https://www.figma.com/file/0rJos7fnQkn5gc4UwhJ6TF/8%EC%A1%B0_%EB%A7%9B%EC%A7%91-%ED%9B%84%EA%B8%B0-%EA%B3%B5%EC%9C%A0-%EC%95%B1?node-id=0%3A1&mode=dev)
 
 ### 📌 **프로젝트 설명**
 
