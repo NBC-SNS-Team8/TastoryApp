@@ -59,7 +59,6 @@ class SignUpActivity : AppCompatActivity() {
         )
 
 
-    private val regHan = Regex("[ㄱ-하ㅏ-ㅣ]")
     private val regEn = Regex("[A-Z]")
     private val regNum = Regex("[0-9]")
     private val regSpecial = Regex("[~!@#\$%^&*_\\-+=`|:;,.?/]")
@@ -180,10 +179,6 @@ class SignUpActivity : AppCompatActivity() {
                         tvPwCheck.text = getString(R.string.error_empty)
                     }
 
-                    inputPw.matches(regHan) -> {
-                        tvPwCheck.text = getString(R.string.check_invalid_pw_char_han)
-                    }
-
                     regEn.containsMatchIn(inputPw).not() -> {
                         tvPwCheck.text = getString(R.string.check_invalid_pw_char)
                     }
@@ -229,6 +224,7 @@ class SignUpActivity : AppCompatActivity() {
             editTextSignupBirthYear -> {
 
                 if (!validBirthYear || !validBirthMonth || !validBirthDay) {
+                    tvBirthCheck.setTextColor(Color.parseColor("#F46767"))
                     tvBirthCheck.isVisible = true
                 }
                 validBirthYear = false
@@ -248,6 +244,7 @@ class SignUpActivity : AppCompatActivity() {
             editTextSignupBirthMonth -> {
 
                 if (!validBirthYear || !validBirthMonth || !validBirthDay) {
+                    tvBirthCheck.setTextColor(Color.parseColor("#F46767"))
                     tvBirthCheck.isVisible = true
                 }
                 validBirthMonth = false
@@ -268,6 +265,7 @@ class SignUpActivity : AppCompatActivity() {
             editTextSignupBirthDay -> {
 
                 if (!validBirthYear || !validBirthMonth || !validBirthDay) {
+                    tvBirthCheck.setTextColor(Color.parseColor("#F46767"))
                     tvBirthCheck.isVisible = true
                 }
                 validBirthDay = false
