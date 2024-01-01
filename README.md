@@ -17,7 +17,6 @@
 ### **📌 Preview**
 
 - 영상
- 
 https://www.youtube.com/watch?v=3d6Tlpg4U8k
 
 ### **📌 구현 기능**
