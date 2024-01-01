@@ -111,10 +111,7 @@
                         style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_id"
-                        app:layout_constraintBottom_toTopOf="@+id/cl_signup_pw"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintTop_toBottomOf="@+id/cl_signup_id" />
+                        android:text="@string/check_id" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_pw"
@@ -142,10 +139,7 @@
                         style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_pw"
-                        app:layout_constraintBottom_toTopOf="@+id/cl_signup_name"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintTop_toBottomOf="@+id/cl_signup_pw" />
+                        android:text="@string/check_pw" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_signup_name"
@@ -172,10 +166,7 @@
                         style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_name"
-                        app:layout_constraintBottom_toTopOf="@+id/ll_signup_birth"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintTop_toBottomOf="@+id/cl_signup_name" />
+                        android:text="@string/check_name" />
 
                     <LinearLayout
                         android:id="@+id/ll_signup_birth"
@@ -234,11 +225,16 @@
                         style="@style/CheckTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="@string/check_birth"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintTop_toBottomOf="@+id/ll_signup_birth" />
+                        android:layout_marginBottom="30dp"
+                        android:text="@string/check_birth" />
+
+                    <TextView
+                        android:id="@+id/tv_empty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\n"
+                        android:textSize="30sp"
+                        />
 
                 </LinearLayout>
             </ScrollView>

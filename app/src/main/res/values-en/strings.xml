@@ -17,7 +17,7 @@
     <string name="check_exist_id">A duplicate ID exists. Please enter a different ID.</string>
     <string name="check_valid_Id">Valid ID</string>
     <string name="check_pw">Check password validity</string>
-    <string name="check_invalid_pw_char">Your password must contain at least one number and uppercase letter.</string>
+    <string name="check_invalid_pw_char">Your password must contain at least one number.</string>
     <string name="check_invalid_pw_special">Must contain at least one special character (~!@#$%^&amp;*_-+=`|:;,.?/).</string>
     <string name="check_invalid_pw_char_han">The password cannot contain Korean consonants or vowels.</string>
     <string name="check_invalid_pw_length">The password must be at least 8 characters and not more than 20 characters in length.</string>
