@@ -82,7 +82,7 @@
 - 유정목
     1. 동그란 ImageView를 만들시 de.hdodenhof:circleimageview:3.1.0이 파일을 import 로 맨위줄에 위치시켰는데 그게 아니라 라이블러리 인 build.gradle.kts(module:app)파일 안에 implementaion 안에 놓고 나머지 xml 작업을 진행하였더니 되었습니다.
 
-- 앱 핵심 기능
+### **📌 앱 핵심 기능**
     
     오직 식당 후기만을 위한 플랫폼
     
