@@ -23,7 +23,6 @@ class FeedActivity : AppCompatActivity() {
 
         val receivedUser = intent.getParcelableExtra<User>("USER")
         val iv_btn_mypage = findViewById<CircleImageView>(R.id.iv_btn_mypage)
-        val blogPost = findViewById<ConstraintLayout>(R.id.cl_feed)
         val tv_welcome = findViewById<TextView>(R.id.tv_welcome)
 
         val firstPost = Post(
@@ -103,14 +102,13 @@ class FeedActivity : AppCompatActivity() {
             tv_welcome.isSelected = true    //marquee 이름이 길면 한줄로 흘러가게 하기
         }
 
-//        writer.text = receivedUser?.name
-
-        iv_btn_mypage.setOnClickListener{    // 버튼 누르면 마이페이지 화면으로 이동
+        //마이페이지 화면으로 이동
+        iv_btn_mypage.setOnClickListener{
             val intent = Intent(this, MyPageActivity::class.java).apply {
+                putExtra("POST", firstPost)
                 putExtra("USER", receivedUser)
             }
             startActivity(intent)
-
             overridePendingTransition(R.anim.slide_up_enter, R.anim.slide_up_exit)
 
         }
@@ -118,7 +116,6 @@ class FeedActivity : AppCompatActivity() {
         // 첫 번째 게시물 클릭 리스너
         feedItem1.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.java).apply {
-                putExtra("USER", receivedUser)
                 putExtra("POST", firstPost)
             }
             startActivity(intent)
@@ -128,7 +125,6 @@ class FeedActivity : AppCompatActivity() {
         // 두 번째 게시물 클릭 리스너
         feedItem2.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.java).apply {
-                putExtra("USER", receivedUser)
                 putExtra("POST", secondPost)
             }
             startActivity(intent)

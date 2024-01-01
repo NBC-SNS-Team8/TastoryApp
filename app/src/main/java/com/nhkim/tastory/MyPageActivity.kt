@@ -12,22 +12,13 @@ class MyPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_page)
 
-
         val xIcon = findViewById<ImageView>(R.id.x_icon)
         val blogName = findViewById<TextView>(R.id.tv_blog_name)
         val blogId = findViewById<TextView>(R.id.tv_blog_id)
         val receivedUser = intent.getParcelableExtra<User>("USER")
+        val receivedPost = intent.getParcelableExtra<Post>("POST")
         val myPost = findViewById<ConstraintLayout>(R.id.my_post)
         val postImage = findViewById<ImageView>(R.id.my_post_image)
-
-        val firstPost = Post(
-            receivedUser?.name,
-            R.drawable.profile1,
-            R.drawable.steak,
-            getString(R.string.stake_title),
-            getString(R.string.stake_review_preview),
-            getString(R.string.stake_review_preview) + getString(R.string.steak_review_contents)
-        )
 
         blogName.text = receivedUser?.name
         blogId.text = getString(R.string.my_id) + receivedUser?.id
@@ -42,7 +33,7 @@ class MyPageActivity : AppCompatActivity() {
         myPost.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.java).apply {
                 putExtra("USER", receivedUser)
-                putExtra("POST", firstPost)
+                putExtra("POST", receivedPost)
             }
             startActivity(intent)
             overridePendingTransition(R.anim.fadein, R.anim.fadeout)
