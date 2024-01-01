@@ -11,7 +11,7 @@
     <string name="login_btn">로그인</string>
     <string name="toast_login">로그인 성공</string>
     <string name="signup_btn">회원가입</string>
-    <string name="error_empty">필수 입력항목을 입력해 주세요.</string>
+    <string name="error_empty">필수입력항목을 입력해 주세요.</string>
     <string name="check_id">ID 중복 체크</string>
     <string name="check_exist_id">중복된 ID가 존재합니다. 다른 아이디를 입력해주세요</string>
     <string name="check_valid_Id">유효한 아이디입니다</string>
@@ -27,6 +27,7 @@
     <string name="check_birth_year">생년은 1900~2023까지입니다.</string>
     <string name="check_birth_month">월은 1~12까지입니다.</string>
     <string name="check_birth_day">날짜는 1~31까지입니다.</string>
+    <string name="signup_failed">필수입력항목을 모두 제대로 입력해주세요.</string>
 
     //Feed 페이지
     <string name="welcome">님 환영합니다!</string>

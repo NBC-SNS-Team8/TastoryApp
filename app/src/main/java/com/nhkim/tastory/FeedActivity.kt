@@ -101,6 +101,10 @@ class FeedActivity : AppCompatActivity() {
 
         tv_welcome.text = receivedUser?.name + getString(R.string.welcome)
 
+        if (tv_welcome.text.toString().length > 10) {
+            tv_welcome.isSelected = true    //marquee 이름이 길면 한줄로 흘러가게 하기
+        }
+
 //        writer.text = receivedUser?.name
 
         iv_btn_mypage.setOnClickListener{    // 버튼 누르면 마이페이지 화면으로 이동
@@ -182,6 +186,10 @@ class FeedActivity : AppCompatActivity() {
 
         val imageView = dialog.findViewById<ImageView>(R.id.dg_image) // yourImageViewId는 dialog_history.xml에 있는 ImageView의 ID
         imageView.setImageResource(imageResId)
+
+        imageView.setOnClickListener {
+            dialog.dismiss()
+        }
 
         dialog.show()
     }

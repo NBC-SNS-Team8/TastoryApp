@@ -181,7 +181,7 @@
                         android:visibility="invisible" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cl_signup_birth"
+                        android:id="@+id/ll_signup_birth"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="50dp"

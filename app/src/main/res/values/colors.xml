@@ -13,4 +13,5 @@
     <color name="dark_brown">#E3B76B</color>
     <color name="transparent">#00000000</color>
     <color name="red">#B71C1C</color>
+    <color name="tp_red">#B2FF80AB</color>
 </resources>

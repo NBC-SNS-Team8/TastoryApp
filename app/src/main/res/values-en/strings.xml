@@ -28,6 +28,7 @@
     <string name="check_birth_year">Birth years range from 1900 to 2023.</string>
     <string name="check_birth_month">Month range from 1 to 12.</string>
     <string name="check_birth_day">Day range from 1 to 12.</string>
+    <string name="signup_failed">Please enter all required information.</string>
 
     //Feed Page
     <string name="welcome">, Welcome!</string>

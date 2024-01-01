@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 
 lateinit var activityResultLauncher: ActivityResultLauncher<Intent>
@@ -26,6 +27,12 @@ class LoginActivity : AppCompatActivity() {
     private val btnSignupPage: ConstraintLayout by lazy {
         findViewById(R.id.cl_login_signup_btn)
     }
+
+    private val etList
+        get() = listOf(
+            editTextLoginId,
+            editTextLoginPw
+        )
 
     private var userId: String = ""
     private var userName: String = ""
@@ -49,7 +56,7 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout)
 
-                 }
+            }
 
         }
 
@@ -76,31 +83,24 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
 
-        editTextLoginId.addTextChangedListener {
-            if (editTextLoginId.text.toString().isBlank()) {
-                //
-            }
-        }
-        editTextLoginPw.addTextChangedListener {
-            if (editTextLoginPw.text.toString().isBlank()) {
-                //
-            }
-        }
-
-        editTextLoginId.setOnFocusChangeListener { v, hasFocus ->
-            if (hasFocus.not()) {
-
-            }
-
-        }
-
-        editTextLoginPw.setOnFocusChangeListener { v, hasFocus ->
-
-        }
-
+        setTextChangedListener()
 
     }
 
+    private fun setTextChangedListener() {
+        etList.forEach { editText ->
+            editText.addTextChangedListener {
+                if (editText.text.toString().isBlank()) {
+                    editText.backgroundTintList =
+                        ContextCompat.getColorStateList(applicationContext, R.color.tp_red)
+                    editText.hint = getString(R.string.error_empty)
+                } else {
+                    editText.backgroundTintList =
+                        ContextCompat.getColorStateList(applicationContext, R.color.transparent)
+                }
+            }
+        }
+    }
 
 
 }
