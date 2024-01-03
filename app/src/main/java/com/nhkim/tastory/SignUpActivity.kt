@@ -97,7 +97,7 @@ class SignUpActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
 
-        //회원가입 버튼 눌렀을 떄
+        //회원가입 버튼 눌렀을 때
         btnSignup.setOnClickListener {
 
             //입력된 값 중 launcher로 Login에 다시 전달할 값들 변수에 저장
@@ -105,7 +105,7 @@ class SignUpActivity : AppCompatActivity() {
             val userPw = editTextSignupPw.text.toString()
             val userName = editTextSignupName.text.toString()
 
-            //모든 입력값이 현재 유효한 값일 떄
+            //모든 입력값이 현재 유효한 값일 때
             if (validId && validPw && validName && validBirthYear && validBirthMonth && validBirthDay) {
 
                 //Login의 activityResultLauncher에 intent로 값을 전달하고 finish
