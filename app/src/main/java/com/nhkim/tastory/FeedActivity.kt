@@ -22,6 +22,12 @@ class FeedActivity : AppCompatActivity() {
         setContentView(R.layout.activity_feed)
 
         val receivedUser = intent.getParcelableExtra<User>("USER")
+        initializeViews(receivedUser)
+        setupHistoryItems()
+
+    }
+
+    private fun initializeViews(receivedUser: User?) {
         val iv_btn_mypage = findViewById<CircleImageView>(R.id.iv_btn_mypage)
         val tv_welcome = findViewById<TextView>(R.id.tv_welcome)
 
@@ -55,30 +61,6 @@ class FeedActivity : AppCompatActivity() {
         val blogProfile2 = feedItem2.findViewById<ImageView>(R.id.iv_profile)
         val blogTitle2 = feedItem2.findViewById<TextView>(R.id.tv_blog_title)
         val blogContent2 = feedItem2.findViewById<TextView>(R.id.tv_blog_content)
-
-        val historyItem1 = findViewById<ConstraintLayout>(R.id.history_item1)
-        val historyItem2 = findViewById<ConstraintLayout>(R.id.history_item2)
-        val historyItem3 = findViewById<ConstraintLayout>(R.id.history_item3)
-        val historyItem4 = findViewById<ConstraintLayout>(R.id.history_item4)
-        val historyItem5 = findViewById<ConstraintLayout>(R.id.history_item5)
-
-        val historyImage1 = historyItem1.findViewById<ImageView>(R.id.iv_history_image)
-        val historyImage2 = historyItem2.findViewById<ImageView>(R.id.iv_history_image)
-        val historyImage3 = historyItem3.findViewById<ImageView>(R.id.iv_history_image)
-        val historyImage4 = historyItem4.findViewById<ImageView>(R.id.iv_history_image)
-        val historyImage5 = historyItem5.findViewById<ImageView>(R.id.iv_history_image)
-
-        historyImage1.setImageResource(R.drawable.pizza)
-        historyImage2.setImageResource(R.drawable.cake)
-        historyImage3.setImageResource(R.drawable.chicken)
-        historyImage4.setImageResource(R.drawable.ramen)
-        historyImage5.setImageResource(R.drawable.noodle)
-
-        historyImage1.clipToOutline = true
-        historyImage2.clipToOutline = true
-        historyImage3.clipToOutline = true
-        historyImage4.clipToOutline = true
-        historyImage5.clipToOutline = true
 
         writer1Name.text = firstPost.name
         blogThumbnail1.setImageResource(firstPost.thumbnail)
@@ -130,6 +112,32 @@ class FeedActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.fadein, R.anim.fadeout)
         }
+    }
+
+    private fun setupHistoryItems() {
+        val historyItem1 = findViewById<ConstraintLayout>(R.id.history_item1)
+        val historyItem2 = findViewById<ConstraintLayout>(R.id.history_item2)
+        val historyItem3 = findViewById<ConstraintLayout>(R.id.history_item3)
+        val historyItem4 = findViewById<ConstraintLayout>(R.id.history_item4)
+        val historyItem5 = findViewById<ConstraintLayout>(R.id.history_item5)
+
+        val historyImage1 = historyItem1.findViewById<ImageView>(R.id.iv_history_image)
+        val historyImage2 = historyItem2.findViewById<ImageView>(R.id.iv_history_image)
+        val historyImage3 = historyItem3.findViewById<ImageView>(R.id.iv_history_image)
+        val historyImage4 = historyItem4.findViewById<ImageView>(R.id.iv_history_image)
+        val historyImage5 = historyItem5.findViewById<ImageView>(R.id.iv_history_image)
+
+        historyImage1.setImageResource(R.drawable.pizza)
+        historyImage2.setImageResource(R.drawable.cake)
+        historyImage3.setImageResource(R.drawable.chicken)
+        historyImage4.setImageResource(R.drawable.ramen)
+        historyImage5.setImageResource(R.drawable.noodle)
+
+        historyImage1.clipToOutline = true
+        historyImage2.clipToOutline = true
+        historyImage3.clipToOutline = true
+        historyImage4.clipToOutline = true
+        historyImage5.clipToOutline = true
 
         historyImage1.setOnClickListener{
             showHistoryDialog(R.drawable.pizza)
@@ -150,7 +158,6 @@ class FeedActivity : AppCompatActivity() {
         historyImage5.setOnClickListener{
             showHistoryDialog(R.drawable.noodle)
         }
-
     }
 
     fun showCustomDialog() {
